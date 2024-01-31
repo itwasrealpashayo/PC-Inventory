@@ -1,0 +1,96 @@
+﻿<Page x:Class="PCInventory.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCInventory.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="950"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="600"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1">
+            <GroupBox Header="Техника"
+                        Style="{StaticResource GrpBoxAll}">
+                <StackPanel>
+                    <Button x:Name="BtnDevice"
+                                Content="Оборудование"
+                                    Style="{StaticResource BtnMenu}">
+
+                    </Button>
+                    <Button x:Name="BtnTypeDevice"
+                                Content="Тип оборудования"
+                                    Style="{StaticResource BtnMenu}">
+
+                    </Button>
+                    <Button x:Name="BtnPlaceInstall"
+                                Content="Место установки"
+                                    Style="{StaticResource BtnMenu}">
+
+                    </Button>
+                </StackPanel>
+
+            </GroupBox>
+
+            <GroupBox Header="Отделы"
+                        Style="{StaticResource GrpBoxAll}">
+                <StackPanel>
+                    <Button x:Name="BtnEmploy"
+                                Content="Сотрудники"
+                                    Style="{StaticResource BtnMenu}">
+
+                    </Button>
+                    <Button x:Name="BtnWorkplace"
+                                Content="Рабочие места"
+                                    Style="{StaticResource BtnMenu}">
+
+                    </Button>
+
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Учет техники"
+                        Style="{StaticResource GrpBoxAll}">
+                <StackPanel>
+                    <Button x:Name="BtnReport"
+                                Content="Отчет"
+                                    Style="{StaticResource BtnMenu}">
+
+                    </Button>
+                    <Button x:Name="BtnMovingDevice"
+                                Content="Перемещение устройства"
+                                    Style="{StaticResource BtnMenu}">
+
+                    </Button>
+                    <Button x:Name="BtnOffDevice"
+                                Content="Списание устройства"
+                                    Style="{StaticResource BtnMenu}">
+
+                    </Button>
+
+                </StackPanel>
+            </GroupBox>
+
+            <StackPanel>
+                <Button x:Name="BtnHelp"
+                            Content="Заявки"
+                                Style="{StaticResource BtnMenu}">
+
+                </Button>
+                
+
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>
