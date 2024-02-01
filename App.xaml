@@ -6,26 +6,42 @@
     <Application.Resources>
         <Style TargetType="GroupBox"
                     x:Key="GrpBoxAll">
+            <Setter Property="BorderBrush" Value="#04145C"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Width" Value="240"/>
             <Setter Property="Margin" Value="5"/>
+            
         </Style>
-        
+
+        <Style TargetType="Label"
+                x:Key="LblMenu">
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
         <Style TargetType="Button"
                 x:Key="BtnMenu">
+            <Setter Property="Foreground" Value="White"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
             <Setter Property="Width" Value="220"/>
-            <Setter Property="Height" Value="40"/>
+            <Setter Property="Height" Value="45"/>
             <Setter Property="Margin" Value="2.5"/>
+            
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="#FF840202" BorderBrush="White"
+                        
+                        <Border Background="#53699E" BorderBrush="White"
                                     CornerRadius="5" BorderThickness="2">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                RecognizesAccessKey="True"/>
                         </Border>
                     </ControlTemplate>
+                    
                 </Setter.Value>
             </Setter>
         </Style>

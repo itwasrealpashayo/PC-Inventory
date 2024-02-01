@@ -7,8 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1200"
       Title="MainPage">
-
+    
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="950"/>
@@ -24,19 +25,28 @@
                         Style="{StaticResource GrpBoxAll}">
                 <StackPanel>
                     <Button x:Name="BtnDevice"
-                                Content="Оборудование"
-                                    Style="{StaticResource BtnMenu}">
-
+                                Style="{StaticResource BtnMenu}">
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="/Resources/ImgDevice.png"/>
+                            <Label Content="Оборудование"
+                                    Style="{StaticResource LblMenu}"/>
+                        </StackPanel>
                     </Button>
                     <Button x:Name="BtnTypeDevice"
-                                Content="Тип оборудования"
-                                    Style="{StaticResource BtnMenu}">
-
+                                Style="{StaticResource BtnMenu}">
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="/Resources/ImgTypeDevice.png"/>
+                            <Label Content="Тип оборудования"
+                                    Style="{StaticResource LblMenu}"/>
+                        </StackPanel>
                     </Button>
                     <Button x:Name="BtnPlaceInstall"
-                                Content="Место установки"
-                                    Style="{StaticResource BtnMenu}">
-
+                                Style="{StaticResource BtnMenu}">
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="/Resources/ImgPlace.png"/>
+                            <Label Content="Место установки"
+                                    Style="{StaticResource LblMenu}"/>
+                        </StackPanel>
                     </Button>
                 </StackPanel>
 
@@ -46,14 +56,20 @@
                         Style="{StaticResource GrpBoxAll}">
                 <StackPanel>
                     <Button x:Name="BtnEmploy"
-                                Content="Сотрудники"
-                                    Style="{StaticResource BtnMenu}">
-
+                            Style="{StaticResource BtnMenu}">
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="/Resources/ImgEmploy.png"/>
+                            <Label Content="Сотрудники"
+                                    Style="{StaticResource LblMenu}"/>
+                        </StackPanel>
                     </Button>
                     <Button x:Name="BtnWorkplace"
-                                Content="Рабочие места"
-                                    Style="{StaticResource BtnMenu}">
-
+                                Style="{StaticResource BtnMenu}">
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="/Resources/ImgWorkplace.png"/>
+                            <Label Content="Рабочие места"
+                                    Style="{StaticResource LblMenu}"/>
+                        </StackPanel>
                     </Button>
 
                 </StackPanel>
@@ -61,21 +77,34 @@
 
             <GroupBox Header="Учет техники"
                         Style="{StaticResource GrpBoxAll}">
+                
                 <StackPanel>
                     <Button x:Name="BtnReport"
-                                Content="Отчет"
-                                    Style="{StaticResource BtnMenu}">
-
+                                Style="{StaticResource BtnMenu}">
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="/Resources/ImgReport.png"/>
+                            <Label Content="Отчет"
+                                    Style="{StaticResource LblMenu}"/>
+                        </StackPanel>
                     </Button>
+                    
                     <Button x:Name="BtnMovingDevice"
-                                Content="Перемещение устройства"
                                     Style="{StaticResource BtnMenu}">
-
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="/Resources/ImgMoving.png"/>
+                            <Label Content="Перемещение устройства"
+                                    Style="{StaticResource LblMenu}"/>
+                        </StackPanel>
                     </Button>
+                    
                     <Button x:Name="BtnOffDevice"
-                                Content="Списание устройства"
-                                    Style="{StaticResource BtnMenu}">
-
+                                Style="{StaticResource BtnMenu}">
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="/Resources/ImgOffDevice.png"/>
+                            <Label Content="Списание устройства"
+                                    Style="{StaticResource LblMenu}"/>
+                        </StackPanel>
+                       
                     </Button>
 
                 </StackPanel>
@@ -83,9 +112,12 @@
 
             <StackPanel>
                 <Button x:Name="BtnHelp"
-                            Content="Заявки"
-                                Style="{StaticResource BtnMenu}">
-
+                            Style="{StaticResource BtnMenu}">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Image Source="/Resources/ImgHelp.png"/>
+                        <Label Content="Заявки"
+                                        Style="{StaticResource LblMenu}"/>
+                    </StackPanel>
                 </Button>
                 
 

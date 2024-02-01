@@ -114,22 +114,31 @@
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ImgPlace.png" />
+    <Resource Include="Resources\ImgPlace.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ImgWorkplace.png" />
+    <Resource Include="Resources\ImgMoving.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ImgTypeDevice.png" />
+    <Resource Include="Resources\ImgHelp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ImgDevice.png" />
+    <Resource Include="Resources\ImgWorkplace.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ImgMoving.png" />
+    <Resource Include="Resources\ImgDevice.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ImgHelp.png" />
+    <Resource Include="Resources\ImgTypeDevice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgEmploy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgOffDevice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgReport.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
