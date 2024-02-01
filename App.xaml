@@ -15,6 +15,15 @@
         </Style>
 
         <Style TargetType="Label"
+                x:Key="LblLogo">
+            <Setter Property="FontSize" Value="23"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        
+        <Style TargetType="Label"
                 x:Key="LblMenu">
             <Setter Property="FontSize" Value="11"/>
             <Setter Property="Foreground" Value="White"/>

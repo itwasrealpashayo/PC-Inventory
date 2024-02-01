@@ -7,9 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1200"
       Title="MainPage">
-    
+
     <Grid>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="950"/>
@@ -19,9 +19,18 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="600"/>
         </Grid.RowDefinitions>
+
+        <Grid Background="#53699e">
+            <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="/Resources/LogoPCInventory.png"
+                   
+                        Width="85"/>
+                <Label Content="PC Inventory"
+                    Style="{StaticResource LblLogo}"/>
+            </WrapPanel>
+        </Grid>
         
-        
-        
+
         <Grid Grid.Row="1"
                 Background="#B5CEF5">
             <StackPanel Grid.Row="1">
@@ -127,6 +136,7 @@
             </StackPanel>
         </Grid>
         
-        
+
+
     </Grid>
 </Page>
