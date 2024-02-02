@@ -23,10 +23,9 @@
         <Grid Background="#53699e">
             <WrapPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Source="/Resources/LogoPCInventory.png"
-                   
                         Width="85"/>
                 <Label Content="PC Inventory"
-                    Style="{StaticResource LblLogo}"/>
+                        Style="{StaticResource LblLogo}"/>
             </WrapPanel>
         </Grid>
         
@@ -35,30 +34,30 @@
                 Background="#B5CEF5">
             <StackPanel Grid.Row="1">
                 <GroupBox Header="Техника"
-                        Style="{StaticResource GrpBoxAll}">
+                            Style="{StaticResource GrpBoxAll}">
                     <StackPanel>
-                        <Button x:Name="BtnDevice"
-                                Style="{StaticResource BtnMenu}">
+                        <Button x:Name="BtnDevice" Click="BtnDevice_Click"
+                                Style="{StaticResource BtnMenu}" MouseEnter="BtnDevice_MouseEnter">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgDevice.png"/>
                                 <Label Content="Оборудование"
-                                    Style="{StaticResource LblMenu}"/>
+                                        Style="{StaticResource LblMenu}"/>
                             </StackPanel>
                         </Button>
                         <Button x:Name="BtnTypeDevice"
-                                Style="{StaticResource BtnMenu}">
+                                    Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgTypeDevice.png"/>
                                 <Label Content="Тип оборудования"
-                                    Style="{StaticResource LblMenu}"/>
+                                        Style="{StaticResource LblMenu}"/>
                             </StackPanel>
                         </Button>
                         <Button x:Name="BtnPlaceInstall"
-                                Style="{StaticResource BtnMenu}">
+                                    Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgPlace.png"/>
                                 <Label Content="Место установки"
-                                    Style="{StaticResource LblMenu}"/>
+                                        Style="{StaticResource LblMenu}"/>
                             </StackPanel>
                         </Button>
                     </StackPanel>
@@ -66,22 +65,22 @@
                 </GroupBox>
 
                 <GroupBox Header="Отделы"
-                        Style="{StaticResource GrpBoxAll}">
+                            Style="{StaticResource GrpBoxAll}">
                     <StackPanel>
                         <Button x:Name="BtnEmploy"
-                            Style="{StaticResource BtnMenu}">
+                                    Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgEmploy.png"/>
                                 <Label Content="Сотрудники"
-                                    Style="{StaticResource LblMenu}"/>
+                                        Style="{StaticResource LblMenu}"/>
                             </StackPanel>
                         </Button>
                         <Button x:Name="BtnWorkplace"
-                                Style="{StaticResource BtnMenu}">
+                                    Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgWorkplace.png"/>
                                 <Label Content="Рабочие места"
-                                    Style="{StaticResource LblMenu}"/>
+                                        Style="{StaticResource LblMenu}"/>
                             </StackPanel>
                         </Button>
 
@@ -89,15 +88,14 @@
                 </GroupBox>
 
                 <GroupBox Header="Учет техники"
-                        Style="{StaticResource GrpBoxAll}">
-
+                            Style="{StaticResource GrpBoxAll}">
                     <StackPanel>
                         <Button x:Name="BtnReport"
-                                Style="{StaticResource BtnMenu}">
+                                    Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgReport.png"/>
                                 <Label Content="Отчет"
-                                    Style="{StaticResource LblMenu}"/>
+                                        Style="{StaticResource LblMenu}"/>
                             </StackPanel>
                         </Button>
 
@@ -106,16 +104,16 @@
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgMoving.png"/>
                                 <Label Content="Перемещение устройства"
-                                    Style="{StaticResource LblMenu}"/>
+                                        Style="{StaticResource LblMenu}"/>
                             </StackPanel>
                         </Button>
 
                         <Button x:Name="BtnOffDevice"
-                                Style="{StaticResource BtnMenu}">
+                                    Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgOffDevice.png"/>
                                 <Label Content="Списание устройства"
-                                    Style="{StaticResource LblMenu}"/>
+                                        Style="{StaticResource LblMenu}"/>
                             </StackPanel>
 
                         </Button>
@@ -125,11 +123,11 @@
 
                 <StackPanel>
                     <Button x:Name="BtnHelp"
-                            Style="{StaticResource BtnMenu}">
+                                Style="{StaticResource BtnMenu}">
                         <StackPanel Orientation="Horizontal" Margin="5">
                             <Image Source="/Resources/ImgHelp.png"/>
                             <Label Content="Заявки"
-                                        Style="{StaticResource LblMenu}"/>
+                                    Style="{StaticResource LblMenu}"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>

@@ -24,5 +24,16 @@ namespace PCInventory.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnDevice_MouseEnter(object sender, MouseEventArgs e)
+        {
+            BtnDevice.Background = new SolidColorBrush(Colors.Black);
+            
+        }
+
+        private void BtnDevice_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
