@@ -63,6 +63,38 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageDevices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageEmployes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageMovingDevice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageOffDevice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagePlace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageTypeDevices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageWorkplaces.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Auth.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +109,30 @@
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageDevices.xaml.cs">
+      <DependentUpon>PageDevices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageEmployes.xaml.cs">
+      <DependentUpon>PageEmployes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageMovingDevice.xaml.cs">
+      <DependentUpon>PageMovingDevice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageOffDevice.xaml.cs">
+      <DependentUpon>PageOffDevice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagePlace.xaml.cs">
+      <DependentUpon>PagePlace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageReports.xaml.cs">
+      <DependentUpon>PageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageTypeDevices.xaml.cs">
+      <DependentUpon>PageTypeDevices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWorkplaces.xaml.cs">
+      <DependentUpon>PageWorkplaces.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utility\Manager.cs" />
     <Compile Include="Windows\Auth.xaml.cs">
@@ -148,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\LogoPCInventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgSearch.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

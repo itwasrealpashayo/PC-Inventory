@@ -4,8 +4,10 @@
              xmlns:local="clr-namespace:PCInventory"
              StartupUri="Windows/MainWindow.xaml">
     <Application.Resources>
+        
+        <!--Стиль меню-->
         <Style TargetType="GroupBox"
-                    x:Key="GrpBoxAll">
+                    x:Key="GrpBoxMenu">
             <Setter Property="Foreground" Value="#312C4D"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="BorderBrush" Value="#04145C"/>
@@ -37,7 +39,6 @@
 
         <Style TargetType="Button"
                 x:Key="BtnMenu">
-            
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
             <Setter Property="Width" Value="220"/>
@@ -81,5 +82,64 @@
             </Setter>
         </Style>
         
+        <!--Стиль оборудование-->
+
+        <Style TargetType="Label"
+                x:Key="LblDevices">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox"
+                x:Key="TxBoxSearch">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Button"
+                x:Key="BtnPages">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Width" Value="35"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="2.5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border"
+                                    Background="Transparent">
+
+                            <ContentPresenter RecognizesAccessKey="True" 
+                                                Margin="{TemplateBinding Padding}"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" 
+                                        Value="True">
+                                <Setter TargetName="Border" 
+                                            Property="Background" Value="#312C4D"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" 
+                                            Property="BorderBrush" Value="#3C90B8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

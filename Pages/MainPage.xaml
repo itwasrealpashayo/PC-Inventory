@@ -11,13 +11,13 @@
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="950"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="600"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="600*"/>
         </Grid.RowDefinitions>
 
         <Grid Background="#53699e">
@@ -34,10 +34,10 @@
                 Background="#B5CEF5">
             <StackPanel Grid.Row="1">
                 <GroupBox Header="Техника"
-                            Style="{StaticResource GrpBoxAll}">
+                            Style="{StaticResource GrpBoxMenu}">
                     <StackPanel>
                         <Button x:Name="BtnDevice" Click="BtnDevice_Click"
-                                Style="{StaticResource BtnMenu}" MouseEnter="BtnDevice_MouseEnter">
+                                Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgDevice.png"/>
                                 <Label Content="Оборудование"
@@ -65,7 +65,7 @@
                 </GroupBox>
 
                 <GroupBox Header="Отделы"
-                            Style="{StaticResource GrpBoxAll}">
+                            Style="{StaticResource GrpBoxMenu}">
                     <StackPanel>
                         <Button x:Name="BtnEmploy"
                                     Style="{StaticResource BtnMenu}">
@@ -88,7 +88,7 @@
                 </GroupBox>
 
                 <GroupBox Header="Учет техники"
-                            Style="{StaticResource GrpBoxAll}">
+                            Style="{StaticResource GrpBoxMenu}">
                     <StackPanel>
                         <Button x:Name="BtnReport"
                                     Style="{StaticResource BtnMenu}">
@@ -133,8 +133,10 @@
                 </StackPanel>
             </StackPanel>
         </Grid>
-        
 
+        <Frame x:Name="FrameSecond"
+                NavigationUIVisibility="Hidden"
+                    Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"/>
 
     </Grid>
 </Page>

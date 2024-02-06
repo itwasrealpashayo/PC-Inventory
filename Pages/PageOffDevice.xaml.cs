@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace PCInventory.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для PageOffDevice.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class PageOffDevice : Page
     {
-        public MainPage()
+        public PageOffDevice()
         {
             InitializeComponent();
-        }
-
-        private void BtnDevice_Click(object sender, RoutedEventArgs e)
-        {
-            FrameSecond.Navigate(new PageDevices());
         }
     }
 }

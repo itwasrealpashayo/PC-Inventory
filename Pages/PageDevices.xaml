@@ -1,0 +1,35 @@
+﻿<Page x:Class="PCInventory.Pages.PageDevices"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCInventory.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="950"
+      Title="Оборудование">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="600*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Background="#53699e"
+                Width="950">
+            
+                    <Label Content="Оборудование"
+                        Style="{StaticResource LblDevices}"/>
+            <WrapPanel HorizontalAlignment="Right" 
+                        VerticalAlignment="Center">
+                <TextBox Style="{StaticResource TxBoxSearch}"/>
+                <Button x:Name="BtnSearch"
+                            Style="{StaticResource BtnPages}">
+                    <Image Source="/Resources/ImgSearch.png"
+                            Height="30" Width="30"/>
+                </Button>
+            </WrapPanel>
+                    
+        </Grid>
+
+    </Grid>
+</Page>
