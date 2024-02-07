@@ -206,7 +206,16 @@
     <Resource Include="Resources\LogoPCInventory.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\ImgAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\ImgSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgEdit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

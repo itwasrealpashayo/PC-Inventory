@@ -121,8 +121,17 @@
   <data name="IcoPCInventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoPCInventory.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImgAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgDelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImgDevice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgDevice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgEmploy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgEmploy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -44,6 +44,7 @@
             <Setter Property="Width" Value="220"/>
             <Setter Property="Height" Value="45"/>
             <Setter Property="Margin" Value="2.5"/>
+            <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -87,7 +88,7 @@
         <Style TargetType="Label"
                 x:Key="LblDevices">
             <Setter Property="Margin" Value="5"/>
-            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="FontSize" Value="23"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -114,6 +115,7 @@
             <Setter Property="Width" Value="35"/>
             <Setter Property="Height" Value="35"/>
             <Setter Property="Margin" Value="2.5"/>
+            <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -141,5 +143,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        
     </Application.Resources>
 </Application>

@@ -73,9 +73,39 @@ namespace PCInventory.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImgAdd {
+            get {
+                object obj = ResourceManager.GetObject("ImgAdd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgDelete {
+            get {
+                object obj = ResourceManager.GetObject("ImgDelete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImgDevice {
             get {
                 object obj = ResourceManager.GetObject("ImgDevice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgEdit {
+            get {
+                object obj = ResourceManager.GetObject("ImgEdit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

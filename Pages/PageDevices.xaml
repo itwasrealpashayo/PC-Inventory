@@ -10,26 +10,65 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="600*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         
-        <Grid Background="#53699e"
-                Width="950">
-            
-                    <Label Content="Оборудование"
+        <Grid Background="#53699e">
+            <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Label Content="Оборудование"
                         Style="{StaticResource LblDevices}"/>
-            <WrapPanel HorizontalAlignment="Right" 
-                        VerticalAlignment="Center">
-                <TextBox Style="{StaticResource TxBoxSearch}"/>
-                <Button x:Name="BtnSearch"
-                            Style="{StaticResource BtnPages}">
-                    <Image Source="/Resources/ImgSearch.png"
-                            Height="30" Width="30"/>
-                </Button>
             </WrapPanel>
-                    
+
+            <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Center">
+                
+
+                
+                <Button x:Name="BtnAdd"
+                            Style="{StaticResource BtnPages}">
+                    <Image Source="/Resources/ImgAdd.png"
+                            Height="28" Width="28"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Button x:Name="BtnEdit"
+                            Style="{StaticResource BtnPages}">
+                    <Image Source="/Resources/ImgEdit.png"
+                            Height="32" Width="32"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Button x:Name="BtnDelete"
+                            Style="{StaticResource BtnPages}">
+                    <Image Source="/Resources/ImgDelete.png"
+                            Height="30" Width="30"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Image Source="/Resources/ImgSearch.png"
+                        Height="30" Width="30"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox Style="{StaticResource TxBoxSearch}"/>
+            </WrapPanel>
         </Grid>
 
+        <Grid Grid.Row="1">
+            <DataGrid >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Наименование"
+                                        MinWidth="150" Width="Auto"/>
+                    <DataGridTextColumn Header="Тип оборудования"
+                                        MinWidth="150" Width="Auto"/>
+                    <DataGridTextColumn Header="Инвентарный номер"
+                                        MinWidth="150" Width="Auto"/>
+                    <DataGridTextColumn Header="Место установки"
+                                        MinWidth="150" Width="Auto"/>
+                    <DataGridTextColumn Header="Дата приобретения"
+                                        MinWidth="150" Width="Auto"/>
+                    <DataGridTextColumn Header="Цена приобретения"
+                                        MinWidth="150" Width="Auto"/>
+                    <DataGridTextColumn Header="Статус"
+                                        MinWidth="150" Width="Auto"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        
     </Grid>
 </Page>

@@ -11,13 +11,13 @@
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="600*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid Background="#53699e">
@@ -134,9 +134,9 @@
             </StackPanel>
         </Grid>
 
-        <Frame x:Name="FrameSecond"
+        <Frame x:Name="FrameSecond" 
                 NavigationUIVisibility="Hidden"
-                    Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"/>
+                    Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"/>
 
     </Grid>
 </Page>
