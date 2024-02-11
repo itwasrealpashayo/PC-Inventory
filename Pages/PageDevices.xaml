@@ -27,25 +27,29 @@
                 <Button x:Name="BtnAdd"
                             Style="{StaticResource BtnPages}">
                     <Image Source="/Resources/ImgAdd.png"
-                            Height="28" Width="28"
-                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            Style="{StaticResource ImgMenu}"/>
                 </Button>
                 <Button x:Name="BtnEdit"
                             Style="{StaticResource BtnPages}">
                     <Image Source="/Resources/ImgEdit.png"
-                            Height="32" Width="32"
-                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            Style="{StaticResource ImgMenu}"/>
                 </Button>
                 <Button x:Name="BtnDelete"
                             Style="{StaticResource BtnPages}">
                     <Image Source="/Resources/ImgDelete.png"
-                            Height="30" Width="30"
-                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            Style="{StaticResource ImgMenu}"/>
                 </Button>
-                <Image Source="/Resources/ImgSearch.png"
-                        Height="30" Width="30"
-                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBox Style="{StaticResource TxBoxSearch}"/>
+                <Grid>
+                    <TextBlock Text="Поиск..."
+                                Style="{StaticResource TxBlSearch}"/>
+                    <Image Source="/Resources/ImgSearch.png"
+                            Style="{StaticResource ImgSearch}"/>
+                    <TextBox x:Name="TxbSearch"
+                                Style="{StaticResource TxBoxSearch}"/>
+
+                    
+                </Grid>
+                
             </WrapPanel>
         </Grid>
 

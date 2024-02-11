@@ -93,9 +93,39 @@ namespace PCInventory.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImgDevDroped {
+            get {
+                object obj = ResourceManager.GetObject("ImgDevDroped", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImgDevice {
             get {
                 object obj = ResourceManager.GetObject("ImgDevice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgDeviceType {
+            get {
+                object obj = ResourceManager.GetObject("ImgDeviceType", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgDevMoved {
+            get {
+                object obj = ResourceManager.GetObject("ImgDevMoved", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,59 +143,9 @@ namespace PCInventory.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ImgEmploy {
+        internal static System.Drawing.Bitmap ImgPlaceInstall {
             get {
-                object obj = ResourceManager.GetObject("ImgEmploy", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ImgHelp {
-            get {
-                object obj = ResourceManager.GetObject("ImgHelp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ImgMoving {
-            get {
-                object obj = ResourceManager.GetObject("ImgMoving", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ImgOffDevice {
-            get {
-                object obj = ResourceManager.GetObject("ImgOffDevice", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ImgPlace {
-            get {
-                object obj = ResourceManager.GetObject("ImgPlace", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ImgReport {
-            get {
-                object obj = ResourceManager.GetObject("ImgReport", resourceCulture);
+                object obj = ResourceManager.GetObject("ImgPlaceInstall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +163,9 @@ namespace PCInventory.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ImgTypeDevice {
+        internal static System.Drawing.Bitmap ImgUser {
             get {
-                object obj = ResourceManager.GetObject("ImgTypeDevice", resourceCulture);
+                object obj = ResourceManager.GetObject("ImgUser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
