@@ -71,11 +71,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageMovingDevice.xaml">
+    <Page Include="Pages\PageDevMoved.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageOffDevice.xaml">
+    <Page Include="Pages\PageDevDroped.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,7 +87,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageTypeDevices.xaml">
+    <Page Include="Pages\PageDeviceType.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,11 +116,11 @@
     <Compile Include="Pages\PageEmployes.xaml.cs">
       <DependentUpon>PageEmployes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PageMovingDevice.xaml.cs">
-      <DependentUpon>PageMovingDevice.xaml</DependentUpon>
+    <Compile Include="Pages\PageDevMoved.xaml.cs">
+      <DependentUpon>PageDevMoved.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PageOffDevice.xaml.cs">
-      <DependentUpon>PageOffDevice.xaml</DependentUpon>
+    <Compile Include="Pages\PageDevDroped.xaml.cs">
+      <DependentUpon>PageDevDroped.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PagePlace.xaml.cs">
       <DependentUpon>PagePlace.xaml</DependentUpon>
@@ -128,8 +128,8 @@
     <Compile Include="Pages\PageReports.xaml.cs">
       <DependentUpon>PageReports.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\PageTypeDevices.xaml.cs">
-      <DependentUpon>PageTypeDevices.xaml</DependentUpon>
+    <Compile Include="Pages\PageDeviceType.xaml.cs">
+      <DependentUpon>PageDeviceType.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageWorkplaces.xaml.cs">
       <DependentUpon>PageWorkplaces.xaml</DependentUpon>
