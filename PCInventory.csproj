@@ -63,6 +63,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageDevice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +89,9 @@
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAuth.xaml.cs">
+      <DependentUpon>PageAuth.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageDevice.xaml.cs">
       <DependentUpon>PageDevice.xaml</DependentUpon>
@@ -175,6 +182,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\LogoPCI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgBackgroundAuth.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

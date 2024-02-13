@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCInventory"
         mc:Ignorable="d"
-        Title="PC Inventory" Height="700" Width="1200" MinHeight="700" MinWidth="1200" 
-        WindowStartupLocation="CenterScreen" SnapsToDevicePixels="True" SizeToContent="WidthAndHeight">
+        Title="PC Inventory" Height="700" Width="1200" MinHeight="700" MinWidth="1200" MaxHeight="1080" MaxWidth="1920"
+        WindowStartupLocation="CenterScreen" SnapsToDevicePixels="True" SizeToContent="WidthAndHeight" WindowState="Normal">
 
     <Grid>
         <Frame x:Name="FrameMain"

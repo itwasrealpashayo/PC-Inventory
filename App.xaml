@@ -8,6 +8,139 @@
 
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
 
+        <Style TargetType="Separator">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+        
+        <Style TargetType="Border"
+                x:Key="BrdAuth">
+            <Setter Property="Width" Value="500"/>
+            <Setter Property="Height" Value="500"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#312c4d"/>
+            <Setter Property="Opacity" Value="0.85"/>
+            <Setter Property="BorderBrush" Value="#acadd2"/>
+            <Setter Property="BorderThickness" Value="2.5"/>
+            <Setter Property="CornerRadius" Value="50"/>
+            <Setter Property="Margin" Value="0"/>
+
+        </Style>
+
+        <Style TargetType="TextBlock"
+                    x:Key="TxblTitle">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="TextBlock"
+                    x:Key="TxblLogPass">
+            <Setter Property="Width" Value="75"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="Button"
+                x:Key="BtnSignIn">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                    CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                                VerticalAlignment="Center"
+                                                Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFC5D3E4"/>
+                    <Setter Property="Foreground" Value="#53699E"/>
+                </Trigger>
+
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#312c4d"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <!--Placeholder для логина и пароля-->
+        <Style TargetType="TextBlock"
+                x:Key="TxBlLogin">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="235"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="IsHitTestVisible" Value="False"/>
+            <Setter Property="Panel.ZIndex" Value="1"/>
+            <Setter Property="Visibility" Value="{Binding ElementName=TxBoxLogin, Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
+        </Style>
+
+        <Style TargetType="TextBox"
+                x:Key="TxBoxLogin">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+        <Style TargetType="TextBlock"
+                x:Key="TxBlPassword">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="235"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="IsHitTestVisible" Value="False"/>
+            <Setter Property="Panel.ZIndex" Value="1"/>
+            <Setter Property="Visibility" Value="Visible"/>
+        </Style>
+
+        <Style TargetType="PasswordBox"
+                x:Key="PsBoxPassword">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+
+
         <!--Стиль главного меню-->
         <Style TargetType="Border"
                 x:Key="BrdMenu">
@@ -139,10 +272,9 @@
             <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontSize" Value="13"/>
-            
         </Style>
         
-        <!--Стиль для кнопок действий-->
+        <!--Стиль для кнопок действий (Удаление, Редактирование, Добавление)-->
         <Style TargetType="Button"
                x:Key="BtnPages">
             <Setter Property="Width" Value="35"/>

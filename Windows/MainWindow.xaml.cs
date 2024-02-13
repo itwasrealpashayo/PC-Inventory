@@ -25,8 +25,10 @@ namespace PCInventory
         public MainWindow()
         {
             InitializeComponent();
+
             Manager.FrameMain = FrameMain;
-            FrameMain.Navigate(new MainPage());
+            FrameMain.Navigate(new PageAuth());
+
         }
     }
 }

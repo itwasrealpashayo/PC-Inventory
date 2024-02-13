@@ -83,6 +83,16 @@ namespace PCInventory.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImgBackgroundAuth {
+            get {
+                object obj = ResourceManager.GetObject("ImgBackgroundAuth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImgDelete {
             get {
                 object obj = ResourceManager.GetObject("ImgDelete", resourceCulture);
