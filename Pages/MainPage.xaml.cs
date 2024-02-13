@@ -27,7 +27,7 @@ namespace PCInventory.Pages
 
         private void BtnDevice_Click(object sender, RoutedEventArgs e)
         {
-            FrameSecond.Navigate(new PageDevices());
+            FrameSecond.Navigate(new PageDevice());
         }
     }
 }

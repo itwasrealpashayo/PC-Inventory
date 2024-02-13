@@ -18,9 +18,9 @@ namespace PCInventory.Pages
     /// <summary>
     /// Логика взаимодействия для PageDevices.xaml
     /// </summary>
-    public partial class PageDevices : Page
+    public partial class PageDevice : Page
     {
-        public PageDevices()
+        public PageDevice()
         {
             InitializeComponent();
         }

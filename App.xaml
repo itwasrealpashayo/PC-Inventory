@@ -4,9 +4,6 @@
              xmlns:local="clr-namespace:PCInventory"
              StartupUri="Windows/MainWindow.xaml">
     
-    
-    
-    
     <Application.Resources>
 
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
