@@ -13,6 +13,7 @@
             <Setter Property="Background" Value="Transparent"/>
         </Style>
         
+        <!--Стиль для страницы "Авторизация"-->
         <Style TargetType="Border"
                 x:Key="BrdAuth">
             <Setter Property="Width" Value="500"/>
@@ -138,8 +139,6 @@
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontSize" Value="16"/>
         </Style>
-
-
 
         <!--Стиль главного меню-->
         <Style TargetType="Border"
