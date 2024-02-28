@@ -79,6 +79,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PagesEditAdd\PageEditAddDevice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +105,9 @@
     </Compile>
     <Compile Include="Pages\PageDeviceType.xaml.cs">
       <DependentUpon>PageDeviceType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesEditAdd\PageEditAddDevice.xaml.cs">
+      <DependentUpon>PageEditAddDevice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -185,6 +192,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ImgBackgroundAuth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImgBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IcoPCInventory.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

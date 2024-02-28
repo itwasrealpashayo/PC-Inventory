@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PCInventory.Pages.PagesEditAdd;
+using PCInventory.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +22,18 @@ namespace PCInventory.Pages
     /// </summary>
     public partial class MainPage : Page
     {
+        
         public MainPage()
         {
             InitializeComponent();
+            FrameSecond.Navigate(new PageDevice());
+            
         }
 
         private void BtnDevice_Click(object sender, RoutedEventArgs e)
         {
             FrameSecond.Navigate(new PageDevice());
         }
+
     }
 }

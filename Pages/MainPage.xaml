@@ -33,6 +33,7 @@
 
         <Grid Grid.Row="1"
                 Background="#53699E">
+            
             <StackPanel Grid.Row="1">
                 <Border Style="{StaticResource BrdMenu}">
                     <StackPanel>
@@ -45,7 +46,7 @@
                                 <Image Source="/Resources/ImgDevice.png"
                                         Style="{StaticResource ImgMenu}"/>
                                 <TextBlock Text="Оборудование"
-                                            Style="{StaticResource TxbMenu}"/>
+                                            Style="{StaticResource TxtBlMenu}"/>
                             </StackPanel>
                         </Button>
 
@@ -55,7 +56,7 @@
                                 <Image Source="/Resources/ImgDeviceType.png"
                                         Style="{StaticResource ImgMenu}"/>
                                 <TextBlock Text="Тип оборудования"
-                                            Style="{StaticResource TxbMenu}"/>
+                                            Style="{StaticResource TxtBlMenu}"/>
                             </StackPanel>
                         </Button>
 
@@ -65,7 +66,7 @@
                                 <Image Source="/Resources/ImgPlaceInstall.png"
                                         Style="{StaticResource ImgMenu}"/>
                                 <TextBlock Text="Место установки"
-                                        Style="{StaticResource TxbMenu}"/>
+                                        Style="{StaticResource TxtBlMenu}"/>
                             </StackPanel>
                         </Button>
                     </StackPanel>
@@ -83,7 +84,7 @@
                                 <Image Source="/Resources/ImgUser.png"
                                         Style="{StaticResource ImgMenu}"/>
                                 <TextBlock Text="Сотрудники"
-                                        Style="{StaticResource TxbMenu}"/>
+                                        Style="{StaticResource TxtBlMenu}"/>
                             </StackPanel>
                         </Button>
 
@@ -93,7 +94,7 @@
                                 <Image Source="/Resources/ImgWorkplace.png"
                                         Style="{StaticResource ImgMenu}"/>
                                 <TextBlock Text="Рабочие места"
-                                        Style="{StaticResource TxbMenu}"/>
+                                        Style="{StaticResource TxtBlMenu}"/>
                             </StackPanel>
                         </Button>
                     </StackPanel>
@@ -110,7 +111,7 @@
                                 <Image Source="/Resources/ImgDevMoved.png"
                                         Style="{StaticResource ImgMenu}"/>
                                 <TextBlock Text="Перемещение оборудования"
-                                        Style="{StaticResource TxbMenu}"/>
+                                        Style="{StaticResource TxtBlMenu}"/>
                             </StackPanel>
                         </Button>
 
@@ -120,7 +121,7 @@
                                 <Image Source="/Resources/ImgDevDroped.png"
                                         Style="{StaticResource ImgMenu}"/>
                                 <TextBlock Text="Списание оборудования"
-                                        Style="{StaticResource TxbMenu}"/>
+                                        Style="{StaticResource TxtBlMenu}"/>
                             </StackPanel>
                         </Button>
                     </StackPanel>
@@ -130,7 +131,16 @@
 
         <Frame x:Name="FrameSecond" 
                 NavigationUIVisibility="Hidden"
-                    Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Content=""/>
-
+                    Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+            
+        </Frame>
+        
+        <Border Height="700" Width="2" Grid.RowSpan="2" Grid.Column="1"
+                    HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Background="#FFC5D3E4"/>
+        
+        <Border Height="2" Width="1200" Grid.Row="1" Grid.Column="1"
+                    HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Background="#FFC5D3E4"/>
     </Grid>
 </Page>

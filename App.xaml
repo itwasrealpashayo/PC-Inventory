@@ -5,7 +5,9 @@
              StartupUri="Windows/MainWindow.xaml">
     
     <Application.Resources>
-
+        
+        
+        
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
 
         <Style TargetType="Separator">
@@ -178,7 +180,7 @@
         </Style>
         
         <Style TargetType="TextBlock"
-                x:Key="TxbMenu">
+                x:Key="TxtBlMenu">
             <Setter Property="FontSize" Value="13"/>
             <Setter Property="FontWeight" Value="Medium"/>
             <Setter Property="TextAlignment" Value="Left"/>
@@ -268,7 +270,7 @@
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
             <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="White"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FontSize" Value="13"/>
         </Style>
@@ -304,6 +306,78 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        
+        <!--Стиль для страниц (Добавления, Редактирования)-->
+        <Style TargetType="TextBlock"
+                x:Key="TxtBlEditAdd">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
 
+        <Style x:Key="AutoSizeHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="Width" Value="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type DataGridColumn}}}"/>
+        </Style>
+
+        <Style TargetType="TextBox"
+                x:Key="TxtBoxEditAdd">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Width" Value="450"/>
+            <Setter Property="Height" Value="25"/>
+            
+        </Style>
+
+        <Style TargetType="ComboBox"
+                x:Key="ComBoxEditAdd">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Width" Value="450"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+
+        <Style TargetType="Button"
+                x:Key="BtnSaveBack">
+            <Setter Property="Width" Value="125"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#53699e"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                    CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                      VerticalAlignment="Center"
+                                      Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#53699E"/>
+                </Trigger>
+
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#312C4D"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Application.Resources>
 </Application>

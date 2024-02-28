@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PCInventory.Pages.PagesEditAdd;
+using PCInventory.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,32 @@ namespace PCInventory.Pages
     /// </summary>
     public partial class PageDevice : Page
     {
+
+        
+
         public PageDevice()
         {
             InitializeComponent();
+            
+            
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            if(FrameEditAdd != null) 
+            { 
+                GrdHeader.Visibility = Visibility.Collapsed;
+                DataGrid.Visibility = Visibility.Collapsed;
+
+                FrameEditAdd.NavigationService.Navigate(new PageEditAddDevice());
+            }
+            else
+            {
+                GrdHeader.Visibility = Visibility.Visible;
+                DataGrid.Visibility = Visibility.Visible;
+            }
+
+        }
+
     }
 }

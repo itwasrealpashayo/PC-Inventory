@@ -1,5 +1,4 @@
-﻿using PCInventory.Pages;
-using PCInventory.Utility;
+﻿using PCInventory.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,23 +14,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PCInventory
+namespace PCInventory.Pages.PagesEditAdd
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageEditAddDevice.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageEditAddDevice : Page
     {
-        public MainWindow()
+        public PageEditAddDevice()
         {
             InitializeComponent();
             
-            Manager.FrameMain = FrameMain;
-            FrameMain.Navigate(new MainPage());
-            
+        }
 
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
 
         }
 
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageDevice());
+            
+        }
     }
 }
