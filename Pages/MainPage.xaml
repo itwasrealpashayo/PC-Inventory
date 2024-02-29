@@ -50,7 +50,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button x:Name="BtnDeviceType"
+                        <Button x:Name="BtnDeviceType" Click="BtnDeviceType_Click"
                                     Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgDeviceType.png"
@@ -60,7 +60,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button x:Name="BtnPlaceInstall"
+                        <Button x:Name="BtnPlaceInstall" Click="BtnPlaceInstall_Click"
                                     Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgPlaceInstall.png"
@@ -78,7 +78,7 @@
                         <Label Content="Отделы"
                                 Style="{StaticResource LblMenuTitle}"/>
                         
-                        <Button x:Name="BtnUser" 
+                        <Button x:Name="BtnUser" Click="BtnUser_Click"
                                     Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgUser.png"
@@ -88,7 +88,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button x:Name="BtnWorkplace"
+                        <Button x:Name="BtnWorkplace" Click="BtnWorkplace_Click"
                                     Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgWorkplace.png"
@@ -105,7 +105,7 @@
                         <Label Content="Учет техники"
                                 Style="{StaticResource LblMenuTitle}"/>
 
-                        <Button x:Name="BtnDevMoved" 
+                        <Button x:Name="BtnDevMoved" Click="BtnDevMoved_Click"
                                     Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgDevMoved.png"
@@ -115,7 +115,7 @@
                             </StackPanel>
                         </Button>
 
-                        <Button x:Name="BtnDevDrop"
+                        <Button x:Name="BtnDevDrop" Click="BtnDevDrop_Click"
                                     Style="{StaticResource BtnMenu}">
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <Image Source="/Resources/ImgDevDroped.png"

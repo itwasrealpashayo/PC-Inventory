@@ -1,5 +1,4 @@
-﻿using PCInventory.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PCInventory.Pages
+namespace PCInventory.Pages.PagesEditAdd
 {
     /// <summary>
-    /// Логика взаимодействия для PageDevDroping.xaml
+    /// Логика взаимодействия для PageEditAddDeviceType.xaml
     /// </summary>
-    public partial class PageDevDroping : Page
+    public partial class PageEditAddDeviceType : Page
     {
-        public PageDevDroping()
+        public PageEditAddDeviceType()
         {
             InitializeComponent();
-            DataGridDevDroping.ItemsSource = DatabaseEntities.GetContext().DeviceDroping.ToList();
         }
     }
 }

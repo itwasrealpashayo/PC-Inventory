@@ -18,10 +18,10 @@
                 Grid.Row="0">
             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"
                         Margin="5">
-                <Label Content="Редактирование"
+                <Label Content="Редактирование" x:Name="LblEdit"
                         Style="{StaticResource LblDevices}"
                         Visibility="Collapsed"/>
-                <Label Content="Добавление"
+                <Label Content="Добавление" x:Name="LblAdd"
                         Style="{StaticResource LblDevices}"/>
             </WrapPanel>
         </Grid>
@@ -40,44 +40,55 @@
 
                     <TextBlock Text="Наименование"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox Text=""
+                    <TextBox x:Name="TxbDeviceName"
+                                Text="{Binding DeviceName}"
                                 Style="{StaticResource TxtBoxEditAdd}"/>
 
                     <TextBlock Text="Тип"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <ComboBox Text=""
+                    <ComboBox x:Name="CmbDeviceType" 
+                                DisplayMemberPath="DeviceTypeName"
+                                SelectedItem="{Binding DeviceType}"
                                 Style="{StaticResource ComBoxEditAdd}"/>
 
                     <TextBlock Text="Модель "
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox Text=""
+                    <TextBox x:Name="TxbDeviceModel" 
+                                Text="{Binding DeviceModel}"
                                 Style="{StaticResource TxtBoxEditAdd}"/>
 
                     <TextBlock Text="Инвентарный номер"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox Text=""
+                    <TextBox x:Name="TxbDeviceInventNum" 
+                                Text="{Binding DeviceInventNum}"
                                 Style="{StaticResource TxtBoxEditAdd}"/>
                 </StackPanel>
 
                 <StackPanel Margin="5">
                     <TextBlock Text="Серийный номер"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox Text=""
+                    <TextBox x:Name="TxbDeviceSerialNum"
+                                Text="{Binding DeviceSerialNum}"
                                 Style="{StaticResource TxtBoxEditAdd}"/>
 
                     <TextBlock Text="Дата приобретения"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox Text=""
-                                Style="{StaticResource TxtBoxEditAdd}"/>
+                    <DatePicker x:Name="DtpDeviceDatePurchase"
+                                    Loaded="DtpDeviceDatePurchase_Loaded"
+                                    SelectedDate="{Binding DeviceDatePurchase}"
+                                    Style="{StaticResource DtPickEditAdd}"/>
 
                     <TextBlock Text="Цена приобретения"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox Text=""
+                    <TextBox x:Name="TxbDevicePrice"
+                                Text="{Binding DevicePrice}"
                                 Style="{StaticResource TxtBoxEditAdd}"/>
 
                     <TextBlock Text="Статус"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <ComboBox Text=""
+                    <ComboBox x:Name="CmbDeviceStatus" 
+                                DisplayMemberPath="DeviceStatusName"
+                                SelectedItem="{Binding DeviceStatus}"
                                 Style="{StaticResource ComBoxEditAdd}"/>
                 </StackPanel>
             </WrapPanel>

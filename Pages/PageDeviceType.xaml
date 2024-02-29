@@ -5,10 +5,66 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PCInventory.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="950"
       Title="PageTypeDevices">
 
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#53699e" x:Name="GrdHeader">
+
+            <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Label Content="Тип оборудования"
+                        Style="{StaticResource LblDevices}"/>
+            </WrapPanel>
+
+            <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Center">
+
+                <Button x:Name="BtnAdd" 
+                            Style="{StaticResource BtnPages}">
+                    <Image Source="/Resources/ImgAdd.png"
+                            Style="{StaticResource ImgMenu}"/>
+                </Button>
+
+                <Button x:Name="BtnEdit"
+                            Style="{StaticResource BtnPages}">
+                    <Image Source="/Resources/ImgEdit.png"
+                            Style="{StaticResource ImgMenu}"/>
+                </Button>
+
+                <Button x:Name="BtnDelete"
+                            Style="{StaticResource BtnPages}">
+                    <Image Source="/Resources/ImgDelete.png"
+                            Style="{StaticResource ImgMenu}"/>
+                </Button>
+
+                <Grid>
+                    <TextBlock Text="Поиск..."
+                                Style="{StaticResource TxBlSearch}"/>
+                    <Image Source="/Resources/ImgSearch.png"
+                            Style="{StaticResource ImgSearch}"/>
+                    <TextBox x:Name="TxbSearch" 
+                                Style="{StaticResource TxBoxSearch}"/>
+
+                </Grid>
+
+            </WrapPanel>
+
+        </Grid>
+
+        <DataGrid x:Name="DataGridDeviceType" 
+                    BorderBrush="Transparent"
+                    AutoGenerateColumns="False"
+                    Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
+                                        Binding="{Binding DeviceTypeName}"
+                                        Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

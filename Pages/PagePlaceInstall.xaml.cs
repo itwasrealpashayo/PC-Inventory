@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCInventory.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,14 @@ using System.Windows.Shapes;
 namespace PCInventory.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PagePlace.xaml
+    /// Логика взаимодействия для PagePlaceInstall.xaml
     /// </summary>
-    public partial class PagePlace : Page
+    public partial class PagePlaceInstall : Page
     {
-        public PagePlace()
+        public PagePlaceInstall()
         {
             InitializeComponent();
+            DataGridPlaceInstall.ItemsSource = DatabaseEntities.GetContext().PlaceInstall.ToList();
         }
     }
 }

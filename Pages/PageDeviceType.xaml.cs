@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCInventory.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace PCInventory.Pages
         public PageTypeDevices()
         {
             InitializeComponent();
+            DataGridDeviceType.ItemsSource = DatabaseEntities.GetContext().DeviceType.ToList();
         }
     }
 }

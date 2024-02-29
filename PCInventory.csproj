@@ -76,11 +76,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageDevice.xaml">
+    <Page Include="Pages\PageDevDroping.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PagePlace.xaml">
+    <Page Include="Pages\PageDevice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,7 +88,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageDevMoving.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagePlaceInstall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PagesEditAdd\PageEditAddDevice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesEditAdd\PageEditAddDeviceType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageWorkplace.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -151,17 +171,32 @@
     <Compile Include="Pages\PageAuth.xaml.cs">
       <DependentUpon>PageAuth.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageDevDroping.xaml.cs">
+      <DependentUpon>PageDevDroping.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageDevice.xaml.cs">
       <DependentUpon>PageDevice.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PagePlace.xaml.cs">
-      <DependentUpon>PagePlace.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageDeviceType.xaml.cs">
       <DependentUpon>PageDeviceType.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageDevMoving.xaml.cs">
+      <DependentUpon>PageDevMoving.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagePlaceInstall.xaml.cs">
+      <DependentUpon>PagePlaceInstall.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PagesEditAdd\PageEditAddDevice.xaml.cs">
       <DependentUpon>PageEditAddDevice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesEditAdd\PageEditAddDeviceType.xaml.cs">
+      <DependentUpon>PageEditAddDeviceType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageUser.xaml.cs">
+      <DependentUpon>PageUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageWorkplace.xaml.cs">
+      <DependentUpon>PageWorkplace.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

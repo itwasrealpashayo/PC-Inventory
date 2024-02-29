@@ -47,7 +47,7 @@
                                 Style="{StaticResource TxBlSearch}"/>
                     <Image Source="/Resources/ImgSearch.png"
                             Style="{StaticResource ImgSearch}"/>
-                    <TextBox x:Name="TxbSearch"
+                    <TextBox x:Name="TxbSearch" 
                                 Style="{StaticResource TxBoxSearch}"/>
 
                 </Grid>
@@ -56,23 +56,31 @@
             
         </Grid>
 
-        <DataGrid x:Name="DataGrid" BorderBrush="Transparent"
+        <DataGrid x:Name="DataGridDevice" 
+                    BorderBrush="Transparent"
                     AutoGenerateColumns="False"
                     Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Наименование" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
+                                        Binding="{Binding DeviceName}"
                                         Width="*" />
                 <DataGridTextColumn Header="Тип оборудования" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
+                                        Binding="{Binding DeviceType.DeviceTypeName}"
                                         Width="*" />
                 <DataGridTextColumn Header="Инвентарный номер" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
+                                        Binding="{Binding DeviceInventNum}"
                                         Width="*" />
                 <DataGridTextColumn Header="Модель" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
+                                        Binding="{Binding DeviceModel}"
                                         Width="*" />
                 <DataGridTextColumn Header="Дата приобретения" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
+                                        Binding="{Binding DeviceDatePurchase, StringFormat=d}"
                                         Width="*" />
                 <DataGridTextColumn Header="Цена приобретения" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
+                                        Binding="{Binding DevicePrice, StringFormat={}{0} руб.}"
                                         Width="*" />
                 <DataGridTextColumn Header="Статус" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
+                                        Binding="{Binding DeviceStatus.DeviceStatusName}"
                                         Width="*" />
             </DataGrid.Columns>
         </DataGrid>

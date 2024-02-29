@@ -36,5 +36,34 @@ namespace PCInventory.Pages
             Manager.SecondFrame.Navigate(new PageDevice());
         }
 
+        private void BtnDeviceType_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PageTypeDevices());
+        }
+
+        private void BtnPlaceInstall_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PagePlaceInstall());
+        }
+
+        private void BtnUser_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PageUser());
+        }
+
+        private void BtnWorkplace_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PageWorkplace());
+        }
+
+        private void BtnDevMoved_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PageDevMoving());
+        }
+
+        private void BtnDevDrop_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PageDevDroping());
+        }
     }
 }

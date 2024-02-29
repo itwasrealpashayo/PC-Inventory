@@ -3,11 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PCInventory"
              StartupUri="Windows/MainWindow.xaml">
-    
+
     <Application.Resources>
-        
-        
-        
+
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
 
         <Style TargetType="Separator">
@@ -336,6 +334,19 @@
             
         </Style>
 
+        <Style TargetType="DatePicker"
+                x:Key="DtPickEditAdd">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Width" Value="450"/>
+            <Setter Property="Height" Value="25"/>
+
+        </Style>
+
         <Style TargetType="ComboBox"
                 x:Key="ComBoxEditAdd">
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -378,6 +389,13 @@
                     <Setter Property="Background" Value="#312C4D"/>
                 </Trigger>
             </Style.Triggers>
+        </Style>
+        
+        <!--Стиль для таблиц-->
+        <Style x:Key="TextWrappingStyle" 
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Justify"/>
         </Style>
     </Application.Resources>
 </Application>

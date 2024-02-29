@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCInventory.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,14 @@ using System.Windows.Shapes;
 namespace PCInventory.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageMovingDevice.xaml
+    /// Логика взаимодействия для PageDevMoving.xaml
     /// </summary>
-    public partial class PageMovingDevice : Page
+    public partial class PageDevMoving : Page
     {
-        public PageMovingDevice()
+        public PageDevMoving()
         {
             InitializeComponent();
+            DataGridDevMoving.ItemsSource = DatabaseEntities.GetContext().DeviceMoving.ToList();
         }
     }
 }

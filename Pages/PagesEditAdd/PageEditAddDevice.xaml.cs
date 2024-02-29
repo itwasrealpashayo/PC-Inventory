@@ -1,4 +1,5 @@
-﻿using PCInventory.Utility;
+﻿using PCInventory.Database;
+using PCInventory.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,15 +22,91 @@ namespace PCInventory.Pages.PagesEditAdd
     /// </summary>
     public partial class PageEditAddDevice : Page
     {
-        public PageEditAddDevice()
+        public Device currentDevice = new Device();
+
+        public PageEditAddDevice(Device _selectedDevice)
         {
             InitializeComponent();
-            
+            CmbDeviceStatus.ItemsSource = DatabaseEntities.GetContext().DeviceStatus.ToList();
+            CmbDeviceType.ItemsSource = DatabaseEntities.GetContext().DeviceType.ToList();
+
+            if (_selectedDevice != null)
+                currentDevice = _selectedDevice;
+            DataContext = currentDevice;
+        }
+
+        private void DtpDeviceDatePurchase_Loaded(object sender, RoutedEventArgs e)
+        {
+            DatePicker datePicker = sender as DatePicker;
+
+            if (datePicker != null && (datePicker.SelectedDate == null || datePicker.SelectedDate == DateTime.MinValue))
+            {
+                datePicker.SelectedDate = DateTime.Today;
+            }
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
+            StringBuilder errors = new StringBuilder();
+            if (TxbDeviceName.Text == null)
+                errors.AppendLine("Укажите наименование оборудования!");
+            if (CmbDeviceType.SelectedItem == null)
+                errors.AppendLine("Выберите тип оборудования!");
+            if (TxbDeviceModel.Text == null)
+                errors.AppendLine("Укажите модель оборудования!");
+            if (TxbDeviceInventNum.Text == null)
+                errors.AppendLine("Укажите инвентарный номер оборудования!");
+            if (TxbDeviceSerialNum.Text == null)
+                errors.AppendLine("Укажите серийный номер оборудования!");
+            if (CmbDeviceStatus.SelectedItem == null)
+                errors.AppendLine("Укажите статус оборудования!");
+            if (DtpDeviceDatePurchase.SelectedDate == null)
+                errors.AppendLine("Укажите дату приобретения оборудования!");
+            if (string.IsNullOrEmpty(TxbDevicePrice.Text))
+            {
+                errors.AppendLine("Укажите цену приобретения!");
+            }
+            else
+            {
+                // Пытаемся преобразовать введенный текст в число
+                if (!decimal.TryParse(TxbDevicePrice.Text, out decimal totalPrice))
+                {
+                    errors.AppendLine("Укажите корректную цену!");
+                }
+            }
 
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString(), "Ошибка", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (currentDevice.DeviceID == 0)
+            {
+                try
+                {
+                    DatabaseEntities.GetContext().Device.Add(currentDevice);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", 
+                        MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+
+            try
+            {
+                DatabaseEntities.GetContext().SaveChanges();
+                MessageBox.Show("Информация сохранена!", "Информация", 
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                Manager.SecondFrame.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", 
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -37,5 +114,6 @@ namespace PCInventory.Pages.PagesEditAdd
             NavigationService.Navigate(new PageDevice());
             
         }
+
     }
 }
