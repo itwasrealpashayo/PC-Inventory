@@ -26,13 +26,14 @@ namespace PCInventory.Pages
         public MainPage()
         {
             InitializeComponent();
-            FrameSecond.Navigate(new PageDevice());
+            Manager.SecondFrame = SecondFrame;
+            Manager.SecondFrame.Navigate(new PageDevice());
             
         }
 
         private void BtnDevice_Click(object sender, RoutedEventArgs e)
         {
-            FrameSecond.Navigate(new PageDevice());
+            Manager.SecondFrame.Navigate(new PageDevice());
         }
 
     }

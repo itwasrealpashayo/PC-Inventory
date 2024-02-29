@@ -28,25 +28,11 @@ namespace PCInventory.Pages
         public PageDevice()
         {
             InitializeComponent();
-            
-            
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            if(FrameEditAdd != null) 
-            { 
-                GrdHeader.Visibility = Visibility.Collapsed;
-                DataGrid.Visibility = Visibility.Collapsed;
-
-                FrameEditAdd.NavigationService.Navigate(new PageEditAddDevice());
-            }
-            else
-            {
-                GrdHeader.Visibility = Visibility.Visible;
-                DataGrid.Visibility = Visibility.Visible;
-            }
-
+            Manager.SecondFrame.Navigate(new Pages.PagesEditAdd.PageEditAddDevice());
         }
 
     }

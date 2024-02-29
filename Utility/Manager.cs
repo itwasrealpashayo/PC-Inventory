@@ -10,6 +10,7 @@ namespace PCInventory.Utility
     internal class Manager
     {
         public static Frame FrameMain;
+        public static Frame SecondFrame;
 
     }
 }

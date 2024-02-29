@@ -76,11 +76,5 @@
                                         Width="*" />
             </DataGrid.Columns>
         </DataGrid>
-
-        <Frame x:Name="FrameEditAdd"
-                NavigationUIVisibility="Hidden"
-                Grid.RowSpan="2"/>
-
-        
     </Grid>
 </Page>
