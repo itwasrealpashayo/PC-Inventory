@@ -1,4 +1,6 @@
 ﻿using PCInventory.Database;
+using PCInventory.Pages.PagesEditAdd;
+using PCInventory.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,11 @@ namespace PCInventory.Pages
         {
             InitializeComponent();
             DataGridDeviceType.ItemsSource = DatabaseEntities.GetContext().DeviceType.ToList();
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PageEditAddDeviceType());
         }
     }
 }

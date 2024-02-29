@@ -24,7 +24,7 @@
 
             <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Center">
 
-                <Button x:Name="BtnAdd" 
+                <Button x:Name="BtnAdd" Click="BtnAdd_Click"
                             Style="{StaticResource BtnPages}">
                     <Image Source="/Resources/ImgAdd.png"
                             Style="{StaticResource ImgMenu}"/>

@@ -278,7 +278,6 @@
                x:Key="BtnPages">
             <Setter Property="Width" Value="35"/>
             <Setter Property="Height" Value="35"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="#FFFFFF"/>
             <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
@@ -287,7 +286,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Left" 
+                            <ContentPresenter HorizontalAlignment="Left"
                                               VerticalAlignment="Center"
                                               Margin="{TemplateBinding Padding}"/>
                         </Border>

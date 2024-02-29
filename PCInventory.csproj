@@ -104,6 +104,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PagesEditAdd\PageEditAddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,6 +195,9 @@
     </Compile>
     <Compile Include="Pages\PagesEditAdd\PageEditAddDeviceType.xaml.cs">
       <DependentUpon>PageEditAddDeviceType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesEditAdd\PageEditAddUser.xaml.cs">
+      <DependentUpon>PageEditAddUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageUser.xaml.cs">
       <DependentUpon>PageUser.xaml</DependentUpon>

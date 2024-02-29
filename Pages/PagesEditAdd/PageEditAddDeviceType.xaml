@@ -5,10 +5,76 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PCInventory.Pages.PagesEditAdd"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="950"
       Title="PageEditAddDeviceType">
 
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#53699e"
+                Grid.Row="0">
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Margin="5">
+
+                <Label Content="Добавление / Редактирование" x:Name="LblAdd"
+                        Style="{StaticResource LblDevices}"/>
+            </WrapPanel>
+        </Grid>
+
+
+        <StackPanel Grid.Row="1"
+                        HorizontalAlignment="Center"
+                        Width="Auto">
+            <Separator Grid.Row="1"
+                        VerticalAlignment="Top"/>
+            <TextBlock Text="Тип оборудования"
+                       Style="{StaticResource TxblTitle}"
+                       Foreground="Black"
+                       HorizontalAlignment="Left"/>
+
+            <WrapPanel>
+                <StackPanel Margin="5">
+
+                    <TextBlock Text="Наименование"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <TextBox x:Name="TxbDeviceTypeName"
+                                Text="{Binding DeviceType.DeviceTypeName}"
+                                Style="{StaticResource TxtBoxEditAdd}"
+                                Width="915"/>
+
+                </StackPanel>
+
+            </WrapPanel>
+        </StackPanel>
+
+        <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Margin="5"
+                        Grid.Row="1">
+            <Button x:Name="BtnSave" Click="BtnSave_Click"
+                            Style="{StaticResource BtnSaveBack}"
+                            Margin="5">
+                <WrapPanel>
+                    <Image Source="/Resources/ImgSave.png"
+                                Style="{StaticResource ImgMenu}"/>
+                    <TextBlock Text="Сохранить" 
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                </WrapPanel>
+            </Button>
+
+            <Button x:Name="BtnBack" Click="BtnBack_Click"
+                            Style="{StaticResource BtnSaveBack}"
+                            Margin="5">
+                <WrapPanel>
+                    <Image Source="/Resources/ImgBack.png"
+                                Style="{StaticResource ImgMenu}"/>
+                    <TextBlock Text="Назад"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                </WrapPanel>
+            </Button>
+        </WrapPanel>
     </Grid>
 </Page>

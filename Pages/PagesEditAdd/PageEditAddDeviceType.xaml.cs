@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PCInventory.Database;
+using PCInventory.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,57 @@ namespace PCInventory.Pages.PagesEditAdd
     /// </summary>
     public partial class PageEditAddDeviceType : Page
     {
+        DeviceType currentDeviceType = new DeviceType();
+
         public PageEditAddDeviceType()
         {
             InitializeComponent();
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder errors = new StringBuilder();
+            if (TxbDeviceTypeName.Text == null)
+                errors.AppendLine("Укажите наименование типа оборудования!");
+            
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString(), "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (currentDeviceType.DeviceTypeID == 0)
+            {
+                try
+                {
+                    DatabaseEntities.GetContext().DeviceType.Add(currentDeviceType);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка",
+                        MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+
+            try
+            {
+                DatabaseEntities.GetContext().SaveChanges();
+                MessageBox.Show("Информация сохранена!", "Информация",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                Manager.SecondFrame.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
