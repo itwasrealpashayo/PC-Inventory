@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PCInventory.Database;
+using PCInventory.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +36,40 @@ namespace PCInventory.Pages
             else
             {
                 TxBlPassword.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void BtnSingIn_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder errors = new StringBuilder();
+
+            if (string.IsNullOrEmpty(TxBoxLogin.Text))
+                errors.AppendLine("Поле \"Логин\" должно быть заполнено!");
+            if (string.IsNullOrEmpty(PsBoxPassword.Password))
+                errors.AppendLine("Поле \"Пароль\" должно быть заполнено!");
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString(), "Ошибка", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                PsBoxPassword.Password = string.Empty;
+            }
+            else
+            {
+                User _currentUser = DatabaseEntities.GetContext().User.FirstOrDefault(x => x.UserLogin == TxBoxLogin.Text || x.UserPassword == PsBoxPassword.Password);
+
+                if (_currentUser != null)
+                {
+                    Manager.AuthUser = _currentUser;
+                    MessageBox.Show($"Здраствуйте, {DatabaseEntities.GetContext().User.FirstOrDefault(x => x.UserID == _currentUser.UserID).UserSurname}!", "Информация", 
+                        MessageBoxButton.OK, MessageBoxImage.Information);
+                    Manager.FrameMain.Navigate(new MainPage());
+                }
+                else
+                {
+                    MessageBox.Show("Пользователь с такими данными не найден!", "Ошибка", 
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
     }

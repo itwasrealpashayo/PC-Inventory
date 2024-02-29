@@ -69,7 +69,7 @@
                                         Width="*" />
                 <DataGridTextColumn Header="Описание места установки" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
                                         Binding="{Binding PlaceInstallDescription}"
-                                        ElementStyle="{StaticResource TextWrappingStyle}"
+                                        ElementStyle="{StaticResource DataGridWrap}"
                                         Width="*" />
             </DataGrid.Columns>
         </DataGrid>

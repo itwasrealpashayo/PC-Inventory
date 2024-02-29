@@ -27,7 +27,7 @@ namespace PCInventory
             InitializeComponent();
             
             Manager.FrameMain = FrameMain;
-            FrameMain.Navigate(new MainPage());
+            FrameMain.Navigate(new PageAuth());
             
 
 

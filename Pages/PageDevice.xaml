@@ -59,6 +59,7 @@
         <DataGrid x:Name="DataGridDevice" 
                     BorderBrush="Transparent"
                     AutoGenerateColumns="False"
+                    Height="600"
                     Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Наименование" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"

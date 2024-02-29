@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCInventory.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace PCInventory.Utility
     {
         public static Frame FrameMain;
         public static Frame SecondFrame;
+        public static User AuthUser;
 
     }
 }

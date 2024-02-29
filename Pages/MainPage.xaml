@@ -126,6 +126,17 @@
                         </Button>
                     </StackPanel>
                 </Border>
+
+
+                <Button x:Name="BtnExit" Click="BtnExit_Click"
+                                    Style="{StaticResource BtnMenu}">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Image Source="/Resources/ImgExit.png"
+                                        Style="{StaticResource ImgMenu}"/>
+                        <TextBlock Text="Выход"
+                                        Style="{StaticResource TxtBlMenu}"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Grid>
 

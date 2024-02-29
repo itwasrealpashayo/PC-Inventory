@@ -25,7 +25,7 @@
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <Image Source="/Resources/LogoPCI.png"
-                            Width="100"/>
+                            Width="125"/>
                     <Label Content="PC Inventory"
                             Style="{StaticResource LblLogo}"/>
                 </WrapPanel>
@@ -61,7 +61,7 @@
                     
                 </WrapPanel>
 
-                <Button x:Name="BtnSingIn"
+                <Button x:Name="BtnSingIn" Click="BtnSingIn_Click"
                             Content="Войти" 
                             Style="{StaticResource BtnSignIn}"/>
             </StackPanel>

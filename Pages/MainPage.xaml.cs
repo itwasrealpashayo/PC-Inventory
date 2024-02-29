@@ -65,5 +65,10 @@ namespace PCInventory.Pages
         {
             Manager.SecondFrame.Navigate(new PageDevDroping());
         }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.FrameMain.Navigate(new PageAuth());
+        }
     }
 }

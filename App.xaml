@@ -392,7 +392,7 @@
         </Style>
         
         <!--Стиль для таблиц-->
-        <Style x:Key="TextWrappingStyle" 
+        <Style x:Key="DataGridWrap" 
                TargetType="{x:Type TextBlock}">
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="TextAlignment" Value="Justify"/>
