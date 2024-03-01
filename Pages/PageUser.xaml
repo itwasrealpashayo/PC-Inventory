@@ -46,7 +46,8 @@
                                 Style="{StaticResource TxBlSearch}"/>
                     <Image Source="/Resources/ImgSearch.png"
                             Style="{StaticResource ImgSearch}"/>
-                    <TextBox x:Name="TxbSearch" 
+                    <TextBox x:Name="TxbSearch"
+                                TextChanged="TxbSearch_TextChanged"
                                 Style="{StaticResource TxBoxSearch}"/>
 
                 </Grid>

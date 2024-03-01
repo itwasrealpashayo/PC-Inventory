@@ -3,6 +3,7 @@ using PCInventory.Pages.PagesEditAdd;
 using PCInventory.Utility;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,6 +62,25 @@ namespace PCInventory.Pages
                 {
                     MessageBox.Show(ex.Message.ToString());
                 }
+            }
+        }
+
+        private void TxbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchText = TxbSearch.Text.ToLower();
+            ICollectionView cv = CollectionViewSource.GetDefaultView(DataGridUser.ItemsSource);
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                cv.Filter = null;
+            }
+            else
+            {
+                cv.Filter = o =>
+                {
+                    User item = o as User;
+                    return item.UserSurname.ToLower().Contains(searchText);
+                };
             }
         }
     }
