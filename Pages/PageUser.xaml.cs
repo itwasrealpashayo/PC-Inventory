@@ -1,4 +1,6 @@
 ﻿using PCInventory.Database;
+using PCInventory.Pages.PagesEditAdd;
+using PCInventory.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +26,41 @@ namespace PCInventory.Pages
         public PageUser()
         {
             InitializeComponent();
+          
             DataGridUser.ItemsSource = DatabaseEntities.GetContext().User.ToList();
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PageEditAddUser(null));
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            var ObjectForEdit = DataGridUser.SelectedItem;
+            Manager.SecondFrame.Navigate(new PageEditAddUser((User)ObjectForEdit));
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var ObjectForDelete = DataGridUser.SelectedItems.Cast<User>().ToList();
+
+            if (MessageBox.Show($"Вы действительно хотите удалить {ObjectForDelete.Count()} элемент", "Внимание",
+                    MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    DatabaseEntities.GetContext().User.RemoveRange(ObjectForDelete);
+                    DatabaseEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+
+                    DataGridUser.ItemsSource = DatabaseEntities.GetContext().User.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
     }
 }

@@ -18,29 +18,32 @@ using System.Windows.Shapes;
 namespace PCInventory.Pages.PagesEditAdd
 {
     /// <summary>
-    /// Логика взаимодействия для PageEditAddDeviceType.xaml
+    /// Логика взаимодействия для PageEditAddPlaceInstall.xaml
     /// </summary>
-    public partial class PageEditAddDeviceType : Page
+    public partial class PageEditAddPlaceInstall : Page
     {
-        public DeviceType currentDeviceType = new DeviceType();
+        public PlaceInstall currentPlaceInstall = new PlaceInstall();
 
-        public PageEditAddDeviceType(DeviceType _selectedDeviceType)
+        public PageEditAddPlaceInstall(PlaceInstall _selectedPlaceInstall)
         {
             InitializeComponent();
+            CmbWorkplaceName.ItemsSource = DatabaseEntities.GetContext().Workplace.ToList();
 
-            if (_selectedDeviceType != null)
-                currentDeviceType = _selectedDeviceType;
-            DataContext = currentDeviceType;
+            if (_selectedPlaceInstall != null)
+                currentPlaceInstall = _selectedPlaceInstall;
+            DataContext = currentPlaceInstall;
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            if (string.IsNullOrEmpty(TxbDeviceTypeName.Text))
-            {
-                errors.AppendLine("Укажите цену приобретения!");
-            }
-
+            if (CmbWorkplaceName.SelectedItem == null)
+                errors.AppendLine("Укажите рабочее место!");
+            if (TxbPlaceInstallCabinet.Text == null)
+                errors.AppendLine("Укажите кабинет!");
+            if (TxbPlaceInstallDescription.Text == null)
+                errors.AppendLine("Опишите место установки!");
+           
 
             if (errors.Length > 0)
             {
@@ -49,11 +52,11 @@ namespace PCInventory.Pages.PagesEditAdd
                 return;
             }
 
-            if (currentDeviceType.DeviceTypeID == 0)
+            if (currentPlaceInstall.PlaceInstallID == 0)
             {
                 try
                 {
-                    DatabaseEntities.GetContext().DeviceType.Add(currentDeviceType);
+                    DatabaseEntities.GetContext().PlaceInstall.Add(currentPlaceInstall);
                 }
                 catch (Exception ex)
                 {
@@ -67,18 +70,19 @@ namespace PCInventory.Pages.PagesEditAdd
                 DatabaseEntities.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!", "Информация",
                     MessageBoxButton.OK, MessageBoxImage.Information);
-                Manager.SecondFrame.Navigate(new PageTypeDevices());
+                Manager.SecondFrame.Navigate(new PagePlaceInstall());
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new PageTypeDevices());
+            NavigationService.Navigate(new PagePlaceInstall());
         }
     }
 }

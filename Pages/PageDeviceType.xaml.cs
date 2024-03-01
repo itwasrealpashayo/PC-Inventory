@@ -31,7 +31,35 @@ namespace PCInventory.Pages
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Manager.SecondFrame.Navigate(new PageEditAddDeviceType());
+            Manager.SecondFrame.Navigate(new PageEditAddDeviceType(null));
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            var ObjectForEdit = DataGridDeviceType.SelectedItem;
+            Manager.SecondFrame.Navigate(new PageEditAddDeviceType((DeviceType)ObjectForEdit));
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var ObjectForDelete = DataGridDeviceType.SelectedItems.Cast<DeviceType>().ToList();
+
+            if (MessageBox.Show($"Вы действительно хотите удалить {ObjectForDelete.Count()} элемент", "Внимание",
+                    MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    DatabaseEntities.GetContext().DeviceType.RemoveRange(ObjectForDelete);
+                    DatabaseEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+
+                    DataGridDeviceType.ItemsSource = DatabaseEntities.GetContext().DeviceType.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
     }
 }

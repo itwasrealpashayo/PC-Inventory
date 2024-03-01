@@ -1,4 +1,4 @@
-﻿<Page x:Class="PCInventory.Pages.PagesEditAdd.PageEditAddDeviceType"
+﻿<Page x:Class="PCInventory.Pages.PagesEditAdd.PageEditAddPlaceInstall"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:PCInventory.Pages.PagesEditAdd"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="950"
-      Title="PageEditAddDeviceType">
+      Title="PageEditAddPlaceInstall">
 
     <Grid>
 
@@ -31,7 +31,7 @@
                         Width="Auto">
             <Separator Grid.Row="1"
                         VerticalAlignment="Top"/>
-            <TextBlock Text="Тип оборудования"
+            <TextBlock Text="Место установки"
                         Style="{StaticResource TxblTitle}"
                         Foreground="Black"
                         HorizontalAlignment="Left"/>
@@ -41,10 +41,26 @@
 
                     <TextBlock Text="Наименование"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox x:Name="TxbDeviceTypeName"
-                                Text="{Binding DeviceTypeName}"
+                    <ComboBox x:Name="CmbWorkplaceName"
+                                DisplayMemberPath="WorkplaceName"
+                                SelectedItem="{Binding Workplace}"
+                                Style="{StaticResource  ComBoxEditAdd}"
+                                Width="915"/>
+                    
+                    <TextBlock Text="Кабинет"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <TextBox x:Name="TxbPlaceInstallCabinet"
+                                Text="{Binding PlaceInstallCabinet}"
                                 Style="{StaticResource TxtBoxEditAdd}"
                                 Width="915"/>
+
+                    <TextBlock Text="Описание"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <TextBox x:Name="TxbPlaceInstallDescription"
+                                Text="{Binding PlaceInstallDescription}"
+                                Style="{StaticResource TxtBoxEditAdd}"
+                                VerticalContentAlignment="Top"
+                                Width="915" Height="200"/>
 
                 </StackPanel>
 

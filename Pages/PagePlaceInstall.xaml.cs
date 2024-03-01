@@ -1,4 +1,6 @@
 ﻿using PCInventory.Database;
+using PCInventory.Pages.PagesEditAdd;
+using PCInventory.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,39 @@ namespace PCInventory.Pages
         {
             InitializeComponent();
             DataGridPlaceInstall.ItemsSource = DatabaseEntities.GetContext().PlaceInstall.ToList();
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.SecondFrame.Navigate(new PageEditAddPlaceInstall(null));
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            var ObjectForEdit = DataGridPlaceInstall.SelectedItem;
+            Manager.SecondFrame.Navigate(new PageEditAddPlaceInstall((PlaceInstall)ObjectForEdit));
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var ObjectForDelete = DataGridPlaceInstall.SelectedItems.Cast<PlaceInstall>().ToList();
+
+            if (MessageBox.Show($"Вы действительно хотите удалить {ObjectForDelete.Count()} элемент", "Внимание",
+                    MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    DatabaseEntities.GetContext().PlaceInstall.RemoveRange(ObjectForDelete);
+                    DatabaseEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+
+                    DataGridPlaceInstall.ItemsSource = DatabaseEntities.GetContext().PlaceInstall.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
     }
 }

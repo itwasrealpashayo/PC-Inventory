@@ -18,27 +18,27 @@ using System.Windows.Shapes;
 namespace PCInventory.Pages.PagesEditAdd
 {
     /// <summary>
-    /// Логика взаимодействия для PageEditAddDeviceType.xaml
+    /// Логика взаимодействия для PageEditAddWorkplace.xaml
     /// </summary>
-    public partial class PageEditAddDeviceType : Page
+    public partial class PageEditAddWorkplace : Page
     {
-        public DeviceType currentDeviceType = new DeviceType();
+        public Workplace currentWorkplace = new Workplace();
 
-        public PageEditAddDeviceType(DeviceType _selectedDeviceType)
+        public PageEditAddWorkplace(Workplace _selectedWorkplace)
         {
             InitializeComponent();
 
-            if (_selectedDeviceType != null)
-                currentDeviceType = _selectedDeviceType;
-            DataContext = currentDeviceType;
+            if (_selectedWorkplace != null)
+                currentWorkplace = _selectedWorkplace;
+            DataContext = currentWorkplace;
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            if (string.IsNullOrEmpty(TxbDeviceTypeName.Text))
+            if (string.IsNullOrEmpty(TxbWorkplaceName.Text))
             {
-                errors.AppendLine("Укажите цену приобретения!");
+                errors.AppendLine("Укажите наименование рабочего места!");
             }
 
 
@@ -49,11 +49,11 @@ namespace PCInventory.Pages.PagesEditAdd
                 return;
             }
 
-            if (currentDeviceType.DeviceTypeID == 0)
+            if (currentWorkplace.WorkplaceID == 0)
             {
                 try
                 {
-                    DatabaseEntities.GetContext().DeviceType.Add(currentDeviceType);
+                    DatabaseEntities.GetContext().Workplace.Add(currentWorkplace);
                 }
                 catch (Exception ex)
                 {
@@ -67,18 +67,13 @@ namespace PCInventory.Pages.PagesEditAdd
                 DatabaseEntities.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!", "Информация",
                     MessageBoxButton.OK, MessageBoxImage.Information);
-                Manager.SecondFrame.Navigate(new PageTypeDevices());
+                Manager.SecondFrame.Navigate(new PageWorkplace());
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-        }
-
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new PageTypeDevices());
         }
     }
 }

@@ -60,7 +60,7 @@
                                 Style="{StaticResource TxtBlEditAdd}"/>
                     <ComboBox x:Name="CmbRole" 
                                 DisplayMemberPath="RoleName"
-                                SelectedItem="{Binding Role.RoleName}"
+                                SelectedItem="{Binding Role}"
                                 Style="{StaticResource ComBoxEditAdd}"/>
                 </StackPanel>
 
@@ -86,8 +86,8 @@
                     <TextBlock Text="Рабочее место"
                                 Style="{StaticResource TxtBlEditAdd}"/>
                     <ComboBox x:Name="CmbWorkplace" 
-                                DisplayMemberPath="Worlpace.WorkplaceName"
-                                SelectedItem="{Binding DeviceStatus}"
+                                DisplayMemberPath="WorkplaceName"
+                                SelectedItem="{Binding Workplace}"
                                 Style="{StaticResource ComBoxEditAdd}"/>
                 </StackPanel>
             </WrapPanel>
@@ -109,7 +109,7 @@
 
             <Button x:Name="BtnBack" Click="BtnBack_Click"
                             Style="{StaticResource BtnSaveBack}"
-                            Margin="5">
+                            Margin="5" Cursor="Hand">
                 <WrapPanel>
                     <Image Source="/Resources/ImgBack.png"
                                 Style="{StaticResource ImgMenu}"/>

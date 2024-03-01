@@ -30,13 +30,13 @@
                             Style="{StaticResource ImgMenu}"/>
                 </Button>
 
-                <Button x:Name="BtnEdit"
+                <Button x:Name="BtnEdit" Click="BtnEdit_Click"
                             Style="{StaticResource BtnPages}">
                     <Image Source="/Resources/ImgEdit.png"
                             Style="{StaticResource ImgMenu}"/>
                 </Button>
 
-                <Button x:Name="BtnDelete"
+                <Button x:Name="BtnDelete" Click="BtnDelete_Click"
                             Style="{StaticResource BtnPages}">
                     <Image Source="/Resources/ImgDelete.png"
                             Style="{StaticResource ImgMenu}"/>

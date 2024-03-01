@@ -96,6 +96,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PagesEditAdd\PageEditAddDevDroping.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PagesEditAdd\PageEditAddDevice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,7 +108,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PagesEditAdd\PageEditAddDevMoving.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesEditAdd\PageEditAddPlaceInstall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PagesEditAdd\PageEditAddUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesEditAdd\PageEditAddWorkplace.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -190,14 +206,26 @@
     <Compile Include="Pages\PagePlaceInstall.xaml.cs">
       <DependentUpon>PagePlaceInstall.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PagesEditAdd\PageEditAddDevDroping.xaml.cs">
+      <DependentUpon>PageEditAddDevDroping.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PagesEditAdd\PageEditAddDevice.xaml.cs">
       <DependentUpon>PageEditAddDevice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PagesEditAdd\PageEditAddDeviceType.xaml.cs">
       <DependentUpon>PageEditAddDeviceType.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PagesEditAdd\PageEditAddDevMoving.xaml.cs">
+      <DependentUpon>PageEditAddDevMoving.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesEditAdd\PageEditAddPlaceInstall.xaml.cs">
+      <DependentUpon>PageEditAddPlaceInstall.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PagesEditAdd\PageEditAddUser.xaml.cs">
       <DependentUpon>PageEditAddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesEditAdd\PageEditAddWorkplace.xaml.cs">
+      <DependentUpon>PageEditAddWorkplace.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageUser.xaml.cs">
       <DependentUpon>PageUser.xaml</DependentUpon>

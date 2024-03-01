@@ -1,4 +1,4 @@
-﻿<Page x:Class="PCInventory.Pages.PagesEditAdd.PageEditAddDeviceType"
+﻿<Page x:Class="PCInventory.Pages.PagesEditAdd.PageEditAddWorkplace"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:PCInventory.Pages.PagesEditAdd"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="950"
-      Title="PageEditAddDeviceType">
+      Title="PageEditAddWorkplace">
 
     <Grid>
 
@@ -31,7 +31,7 @@
                         Width="Auto">
             <Separator Grid.Row="1"
                         VerticalAlignment="Top"/>
-            <TextBlock Text="Тип оборудования"
+            <TextBlock Text="Рабочее место"
                         Style="{StaticResource TxblTitle}"
                         Foreground="Black"
                         HorizontalAlignment="Left"/>
@@ -41,8 +41,8 @@
 
                     <TextBlock Text="Наименование"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox x:Name="TxbDeviceTypeName"
-                                Text="{Binding DeviceTypeName}"
+                    <TextBox x:Name="TxbWorkplaceName"
+                                Text="{Binding WorkplaceName}"
                                 Style="{StaticResource TxtBoxEditAdd}"
                                 Width="915"/>
 
@@ -65,7 +65,7 @@
                 </WrapPanel>
             </Button>
 
-            <Button x:Name="BtnBack" Click="BtnBack_Click"
+            <Button x:Name="BtnBack" Click="BtnSave_Click"
                             Style="{StaticResource BtnSaveBack}"
                             Margin="5">
                 <WrapPanel>
