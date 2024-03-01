@@ -39,7 +39,8 @@ namespace PCInventory.Pages
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            var ObjectForEdit = DataGridDevice.SelectedItem;
+            Manager.SecondFrame.Navigate(new PageEditAddDevice((Device)ObjectForEdit));
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
