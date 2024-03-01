@@ -51,7 +51,8 @@ namespace PCInventory.Pages
                 {
                     DatabaseEntities.GetContext().PlaceInstall.RemoveRange(ObjectForDelete);
                     DatabaseEntities.GetContext().SaveChanges();
-                    MessageBox.Show("Данные удалены");
+                    MessageBox.Show("Данные удалены", "Информация",
+                        MessageBoxButton.OK, MessageBoxImage.Information);
 
                     DataGridPlaceInstall.ItemsSource = DatabaseEntities.GetContext().PlaceInstall.ToList();
                 }

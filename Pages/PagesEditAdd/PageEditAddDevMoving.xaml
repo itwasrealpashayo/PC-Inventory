@@ -31,7 +31,7 @@
                         Width="Auto">
             <Separator Grid.Row="1"
                         VerticalAlignment="Top"/>
-            <TextBlock Text="Место установки"
+            <TextBlock Text="Перемещение оборудования"
                         Style="{StaticResource TxblTitle}"
                         Foreground="Black"
                         HorizontalAlignment="Left"/>
@@ -41,26 +41,43 @@
 
                     <TextBlock Text="Исполнитель"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <ComboBox x:Name="CmbUserName"
-                                DisplayMemberPath="UserSurname"
+                    <ComboBox x:Name="CmbUser"
                                 SelectedItem="{Binding User}"
                                 Style="{StaticResource  ComBoxEditAdd}"
+                                Width="915">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding UserSurname}"/>
+                                    <Run Text="{Binding UserName}"/>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Text="Рабочее место"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <ComboBox x:Name="CmbWorkplaceName" 
+                                DisplayMemberPath="WorkplaceName"
+                                SelectedItem="{Binding Workplace}"
+                                Style="{StaticResource ComBoxEditAdd}"
+                                Width="915"/>
+                    
+                    <TextBlock Text="Оборудование"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <ComboBox x:Name="CmbDeviceName" 
+                                DisplayMemberPath="DeviceName"
+                                SelectedItem="{Binding Device}"
+                                Style="{StaticResource ComBoxEditAdd}"
                                 Width="915"/>
 
-                    <TextBlock Text="Устройство"
+                    <TextBlock Text="Дата перемещения"
                                 Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox x:Name="TxbDeviceName"
-                                Text="{Binding PlaceInstallCabinet}"
-                                Style="{StaticResource TxtBoxEditAdd}"
-                                Width="915"/>
-
-                    <TextBlock Text="Описание"
-                                Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox x:Name="TxbPlaceInstallDescription"
-                                Text="{Binding PlaceInstallDescription}"
-                                Style="{StaticResource TxtBoxEditAdd}"
-                                VerticalContentAlignment="Top"
-                                Width="915" Height="200"/>
+                    <DatePicker x:Name="DtpDevMovingDate"
+                                    Loaded="DtpDevDropingDate_Loaded"
+                                    SelectedDate="{Binding DeviceMovingDate}"
+                                    Style="{StaticResource DtPickEditAdd}"
+                                    Width="915"/>
 
                 </StackPanel>
 

@@ -84,5 +84,6 @@ namespace PCInventory.Pages.PagesEditAdd
         {
             NavigationService.Navigate(new PagePlaceInstall());
         }
+
     }
 }

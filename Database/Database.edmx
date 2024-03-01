@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище DatabaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище DatabaseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Device">
           <Key>
             <PropertyRef Name="DeviceID" />
@@ -38,6 +38,7 @@
           <Property Name="DeviceMovingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DeviceMovingDate" Type="date" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="WorkplaceID" Type="int" Nullable="false" />
           <Property Name="DeviceID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="DeviceStatus">
@@ -52,7 +53,7 @@
           <Key>
             <PropertyRef Name="DeviceTypeID" />
           </Key>
-          <Property Name="DeviceTypeID" Type="int" Nullable="false" />
+          <Property Name="DeviceTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DeviceTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="PlaceInstall">
@@ -198,6 +199,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DeviceMoving_Workplace">
+          <End Role="Workplace" Type="Self.Workplace" Multiplicity="1" />
+          <End Role="DeviceMoving" Type="Self.DeviceMoving" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workplace">
+              <PropertyRef Name="WorkplaceID" />
+            </Principal>
+            <Dependent Role="DeviceMoving">
+              <PropertyRef Name="WorkplaceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_PlaceInstall_Workplace">
           <End Role="Workplace" Type="Self.Workplace" Multiplicity="1" />
           <End Role="PlaceInstall" Type="Self.PlaceInstall" Multiplicity="*" />
@@ -277,6 +290,10 @@
             <End Role="User" EntitySet="User" />
             <End Role="DeviceMoving" EntitySet="DeviceMoving" />
           </AssociationSet>
+          <AssociationSet Name="FK_DeviceMoving_Workplace" Association="Self.FK_DeviceMoving_Workplace">
+            <End Role="Workplace" EntitySet="Workplace" />
+            <End Role="DeviceMoving" EntitySet="DeviceMoving" />
+          </AssociationSet>
           <AssociationSet Name="FK_PlaceInstall_Workplace" Association="Self.FK_PlaceInstall_Workplace">
             <End Role="Workplace" EntitySet="Workplace" />
             <End Role="PlaceInstall" EntitySet="PlaceInstall" />
@@ -290,8 +307,7 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -339,6 +355,8 @@
           <Property Name="DeviceID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Device" Relationship="Self.FK_DeviceMoving_Device" FromRole="DeviceMoving" ToRole="Device" />
           <NavigationProperty Name="User" Relationship="Self.FK_DeviceMoving_User" FromRole="DeviceMoving" ToRole="User" />
+          <Property Name="WorkplaceID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Workplace" Relationship="DatabaseModel.FK_DeviceMoving_Workplace" FromRole="DeviceMoving" ToRole="Workplace" />
         </EntityType>
         <EntityType Name="DeviceStatus">
           <Key>
@@ -413,6 +431,7 @@
           <NavigationProperty Name="DeviceDroping" Relationship="Self.FK_DeviceDroping_Workplace" FromRole="Workplace" ToRole="DeviceDroping" />
           <NavigationProperty Name="PlaceInstall" Relationship="Self.FK_PlaceInstall_Workplace" FromRole="Workplace" ToRole="PlaceInstall" />
           <NavigationProperty Name="User" Relationship="Self.FK_User_Workplace" FromRole="Workplace" ToRole="User" />
+          <NavigationProperty Name="DeviceMoving" Relationship="DatabaseModel.FK_DeviceMoving_Workplace" FromRole="Workplace" ToRole="DeviceMoving" />
         </EntityType>
         <Association Name="FK_Device_DeviceStatus">
           <End Role="DeviceStatus" Type="Self.DeviceStatus" Multiplicity="1" />
@@ -601,7 +620,23 @@
             <End Role="Workplace" EntitySet="Workplace" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
+          <AssociationSet Name="FK_DeviceMoving_Workplace" Association="DatabaseModel.FK_DeviceMoving_Workplace">
+            <End Role="Workplace" EntitySet="Workplace" />
+            <End Role="DeviceMoving" EntitySet="DeviceMoving" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_DeviceMoving_Workplace">
+          <End Type="DatabaseModel.Workplace" Role="Workplace" Multiplicity="1" />
+          <End Type="DatabaseModel.DeviceMoving" Role="DeviceMoving" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workplace">
+              <PropertyRef Name="WorkplaceID" />
+            </Principal>
+            <Dependent Role="DeviceMoving">
+              <PropertyRef Name="WorkplaceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -639,6 +674,7 @@
           <EntitySetMapping Name="DeviceMoving">
             <EntityTypeMapping TypeName="DatabaseModel.DeviceMoving">
               <MappingFragment StoreEntitySet="DeviceMoving">
+                <ScalarProperty Name="WorkplaceID" ColumnName="WorkplaceID" />
                 <ScalarProperty Name="DeviceMovingID" ColumnName="DeviceMovingID" />
                 <ScalarProperty Name="DeviceMovingDate" ColumnName="DeviceMovingDate" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />

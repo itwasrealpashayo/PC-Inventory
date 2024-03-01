@@ -36,11 +36,9 @@ namespace PCInventory.Pages.PagesEditAdd
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            if (string.IsNullOrEmpty(TxbDeviceTypeName.Text))
-            {
-                errors.AppendLine("Укажите цену приобретения!");
-            }
 
+            if (string.IsNullOrEmpty(TxbDeviceTypeName.Text))
+                errors.AppendLine("Укажите наименование типа оборудования!");
 
             if (errors.Length > 0)
             {

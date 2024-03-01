@@ -38,16 +38,17 @@
             <WrapPanel>
                 <StackPanel Margin="5">
 
-                    <TextBlock Text="Имя"
-                                Style="{StaticResource TxtBlEditAdd}"/>
-                    <TextBox x:Name="TxbUserName"
-                                Text="{Binding UserName}"
-                                Style="{StaticResource TxtBoxEditAdd}"/>
 
                     <TextBlock Text="Фамилия"
                                 Style="{StaticResource TxtBlEditAdd}"/>
                     <TextBox x:Name="TxbUserSurname" 
                                 Text="{Binding UserSurname}"
+                                Style="{StaticResource TxtBoxEditAdd}"/>
+
+                    <TextBlock Text="Имя"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <TextBox x:Name="TxbUserName"
+                                Text="{Binding UserName}"
                                 Style="{StaticResource TxtBoxEditAdd}"/>
 
                     <TextBlock Text="Отчество"

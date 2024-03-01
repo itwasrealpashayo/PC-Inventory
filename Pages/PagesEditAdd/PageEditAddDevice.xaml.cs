@@ -48,15 +48,16 @@ namespace PCInventory.Pages.PagesEditAdd
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            if (TxbDeviceName.Text == null)
+
+            if (string.IsNullOrEmpty(TxbDeviceName.Text))
                 errors.AppendLine("Укажите наименование оборудования!");
             if (CmbDeviceType.SelectedItem == null)
                 errors.AppendLine("Выберите тип оборудования!");
-            if (TxbDeviceModel.Text == null)
+            if (string.IsNullOrEmpty(TxbDeviceModel.Text))
                 errors.AppendLine("Укажите модель оборудования!");
-            if (TxbDeviceInventNum.Text == null)
+            if (string.IsNullOrEmpty(TxbDeviceInventNum.Text))
                 errors.AppendLine("Укажите инвентарный номер оборудования!");
-            if (TxbDeviceSerialNum.Text == null)
+            if (string.IsNullOrEmpty(TxbDeviceSerialNum.Text))
                 errors.AppendLine("Укажите серийный номер оборудования!");
             if (CmbDeviceStatus.SelectedItem == null)
                 errors.AppendLine("Укажите статус оборудования!");

@@ -16,14 +16,12 @@ namespace PCInventory.Database
     public partial class DatabaseEntities : DbContext
     {
         private static DatabaseEntities _context;
-
         public static DatabaseEntities GetContext()
         {
             if (_context == null)
                 _context = new DatabaseEntities();
             return _context;
         }
-
         public DatabaseEntities()
             : base("name=DatabaseEntities")
         {

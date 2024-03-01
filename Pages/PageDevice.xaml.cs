@@ -40,7 +40,7 @@ namespace PCInventory.Pages
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             var ObjectForEdit = DataGridDevice.SelectedItem;
-            Manager.SecondFrame.Navigate(new PageEditAddDevice((Device)ObjectForEdit));
+            Manager.SecondFrame.Navigate(new Pages.PagesEditAdd.PageEditAddDevice((Device)ObjectForEdit));
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
@@ -54,7 +54,8 @@ namespace PCInventory.Pages
                 {
                     DatabaseEntities.GetContext().Device.RemoveRange(ObjectForDelete);
                     DatabaseEntities.GetContext().SaveChanges();
-                    MessageBox.Show("Данные удалены");
+                    MessageBox.Show("Данные удалены", "Информация", 
+                        MessageBoxButton.OK, MessageBoxImage.Information);
 
                     DataGridDevice.ItemsSource = DatabaseEntities.GetContext().Device.ToList();
                 }

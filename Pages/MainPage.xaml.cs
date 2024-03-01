@@ -68,7 +68,13 @@ namespace PCInventory.Pages
 
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
-            Manager.FrameMain.Navigate(new PageAuth());
+            MessageBoxResult result = MessageBox.Show("Вы действительно хотите выйти?", "Подтверждение выхода", 
+                MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Manager.FrameMain.Navigate(new PageAuth());
+            }
         }
     }
 }

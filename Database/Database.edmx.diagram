@@ -26,6 +26,7 @@
         <AssociationConnector Association="DatabaseModel.FK_PlaceInstall_Workplace" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.FK_User_Role" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseModel.FK_User_Workplace" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_DeviceMoving_Workplace" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

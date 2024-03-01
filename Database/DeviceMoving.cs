@@ -18,8 +18,10 @@ namespace PCInventory.Database
         public System.DateTime DeviceMovingDate { get; set; }
         public int UserID { get; set; }
         public int DeviceID { get; set; }
+        public int WorkplaceID { get; set; }
     
         public virtual Device Device { get; set; }
         public virtual User User { get; set; }
+        public virtual Workplace Workplace { get; set; }
     }
 }

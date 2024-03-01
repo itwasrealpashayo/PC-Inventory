@@ -17,7 +17,7 @@
         <Grid Background="#53699e" x:Name="GrdHeader">
 
             <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center">
-                <Label Content="Пользователи"
+                <Label Content="Сотрудники"
                 Style="{StaticResource LblDevices}"/>
             </WrapPanel>
 

@@ -20,6 +20,7 @@ namespace PCInventory.Database
             this.DeviceDroping = new HashSet<DeviceDroping>();
             this.PlaceInstall = new HashSet<PlaceInstall>();
             this.User = new HashSet<User>();
+            this.DeviceMoving = new HashSet<DeviceMoving>();
         }
     
         public int WorkplaceID { get; set; }
@@ -31,5 +32,7 @@ namespace PCInventory.Database
         public virtual ICollection<PlaceInstall> PlaceInstall { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DeviceMoving> DeviceMoving { get; set; }
     }
 }

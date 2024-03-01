@@ -5,10 +5,119 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PCInventory.Pages.PagesEditAdd"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="950"
+      d:DesignHeight="700" d:DesignWidth="950"
       Title="PageEditAddDevDroping">
 
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#53699e"
+                Grid.Row="0">
+            <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Margin="5">
+
+                <Label Content="Добавление / Редактирование" x:Name="LblAdd"
+                        Style="{StaticResource LblDevices}"/>
+            </WrapPanel>
+        </Grid>
+
+
+        <StackPanel Grid.Row="1"
+                        HorizontalAlignment="Center"
+                        Width="Auto">
+            <Separator Grid.Row="1"
+                        VerticalAlignment="Top"/>
+            <TextBlock Text="Списание оборудования"
+                       Style="{StaticResource TxblTitle}"
+                       Foreground="Black"
+                       HorizontalAlignment="Left"/>
+
+            <WrapPanel>
+                <StackPanel Margin="5">
+
+                    <TextBlock Text="Исполнитель"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <ComboBox x:Name="CmbUserSurname"
+                                SelectedItem="{Binding User}"
+                                Style="{StaticResource ComBoxEditAdd}"
+                                Width="915">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding UserSurname}"/>
+                                    <Run Text="{Binding UserName}"/>
+                                </TextBlock>
+                                
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBlock Text="Рабочее место"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <ComboBox x:Name="CmbWorkplace" 
+                                DisplayMemberPath="WorkplaceName"
+                                SelectedItem="{Binding Workplace}"
+                                Style="{StaticResource ComBoxEditAdd}"
+                                Width="915"/>
+
+                    <TextBlock Text="Дата списания"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <DatePicker x:Name="DtpDevDropingDate"
+                                    Loaded="DtpDevDropingDate_Loaded"
+                                    SelectedDate="{Binding DeviceDropingDate}"
+                                    Style="{StaticResource DtPickEditAdd}"
+                                    Width="915"/>
+
+                    <TextBlock Text="Оборудование"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <ComboBox x:Name="CmbDeviceName" 
+                                DisplayMemberPath="DeviceName"
+                                SelectedItem="{Binding Device}"
+                                Style="{StaticResource ComBoxEditAdd}"
+                                Width="915"/>
+
+                    <TextBlock Text="Причина"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                    <TextBox x:Name="TxbDeviceDropingDefect" 
+                                Text="{Binding DeviceDropingDefect}"
+                                Style="{StaticResource TxtBoxEditAdd}"
+                                VerticalContentAlignment="Top"
+                                Width="915" Height="175"/>
+
+                </StackPanel>
+
+                
+            </WrapPanel>
+        </StackPanel>
+
+        <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Margin="5"
+                        Grid.Row="1">
+            <Button x:Name="BtnSave" Click="BtnSave_Click"
+                            Style="{StaticResource BtnSaveBack}"
+                            Margin="5">
+                <WrapPanel>
+                    <Image Source="/Resources/ImgSave.png"
+                                Style="{StaticResource ImgMenu}"/>
+                    <TextBlock Text="Сохранить" 
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                </WrapPanel>
+            </Button>
+
+            <Button x:Name="BtnBack" Click="BtnBack_Click"
+                            Style="{StaticResource BtnSaveBack}"
+                            Margin="5">
+                <WrapPanel>
+                    <Image Source="/Resources/ImgBack.png"
+                                Style="{StaticResource ImgMenu}"/>
+                    <TextBlock Text="Назад"
+                                Style="{StaticResource TxtBlEditAdd}"/>
+                </WrapPanel>
+            </Button>
+        </WrapPanel>
     </Grid>
 </Page>

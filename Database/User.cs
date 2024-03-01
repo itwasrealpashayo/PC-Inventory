@@ -26,10 +26,6 @@ namespace PCInventory.Database
         public string UserName { get; set; }
         public string UserSurname { get; set; }
         public string UserPatronymic { get; set; }
-        public string UserPhone { get; set; }
-        public int UserWorkplaceID { get; set; }
-        public string UserLogin { get; set; }
-        public string UserPassword { get; set; }
         public string FullName
         {
             get
@@ -37,6 +33,11 @@ namespace PCInventory.Database
                 return $"{UserSurname} {UserName} {UserPatronymic}";
             }
         }
+
+        public string UserPhone { get; set; }
+        public int UserWorkplaceID { get; set; }
+        public string UserLogin { get; set; }
+        public string UserPassword { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DeviceDroping> DeviceDroping { get; set; }
