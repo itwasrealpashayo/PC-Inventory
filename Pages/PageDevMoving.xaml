@@ -71,7 +71,7 @@
                                         Binding="{Binding Device.DeviceName}"
                                         Width="*" />
                 <DataGridTextColumn Header="Дата перемещения" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
-                                        Binding="{Binding DeviceMovingDate, StringFormat=d}"
+                                        Binding="{Binding DeviceMovingDate, StringFormat={}{0:dd.MM.yyyy}}"
                                         Width="*" />
             </DataGrid.Columns>
         </DataGrid>

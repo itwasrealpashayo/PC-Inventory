@@ -75,10 +75,10 @@
                                         Binding="{Binding DeviceModel}"
                                         Width="*" />
                 <DataGridTextColumn Header="Дата приобретения" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
-                                        Binding="{Binding DeviceDatePurchase, StringFormat=d}"
+                                        Binding="{Binding DeviceDatePurchase, StringFormat={}{0:dd.MM.yyyy}}"
                                         Width="*" />
                 <DataGridTextColumn Header="Цена приобретения" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
-                                        Binding="{Binding DevicePrice, StringFormat={}{0} руб.}"
+                                        Binding="{Binding DevicePrice, StringFormat= {}{0:#} руб.}"
                                         Width="*" />
                 <DataGridTextColumn Header="Статус" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
                                         Binding="{Binding DeviceStatus.DeviceStatusName}"

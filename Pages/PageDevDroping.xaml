@@ -71,7 +71,7 @@
                                         Binding="{Binding Device.DeviceName}"
                                         Width="*" />
                 <DataGridTextColumn Header="Дата списания" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
-                                        Binding="{Binding DeviceDropingDate, StringFormat=d}"
+                                        Binding="{Binding DeviceDropingDate, StringFormat={}{0:dd.MM.yyyy}}"
                                         Width="*" />
                 <DataGridTextColumn Header="Причина списания" HeaderStyle="{StaticResource AutoSizeHeaderStyle}"
                                         Binding="{Binding DeviceDropingDefect}"
