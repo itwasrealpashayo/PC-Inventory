@@ -100,13 +100,14 @@ namespace PCInventory.Pages.PagesEditAdd
                 DatabaseEntities.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!", "Информация", 
                     MessageBoxButton.OK, MessageBoxImage.Information);
-                Manager.SecondFrame.GoBack();
+                Manager.SecondFrame.Navigate(new PageDevice());
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Ошибка", 
                     MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

@@ -61,7 +61,7 @@ namespace PCInventory.Pages
                 if (_currentUser != null)
                 {
                     Manager.AuthUser = _currentUser;
-                    MessageBox.Show($"Здраствуйте, {DatabaseEntities.GetContext().User.FirstOrDefault(x => x.UserID == _currentUser.UserID).UserSurname}!", "Информация", 
+                    MessageBox.Show($"Здраствуйте, {Manager.AuthUser.FullName}!", "Информация", 
                         MessageBoxButton.OK, MessageBoxImage.Information);
                     Manager.FrameMain.Navigate(new MainPage());
                 }
